@@ -37,5 +37,3 @@ if __name__ == '__main__':
         total += roll
     total += mod
     print("{}: {}".format(type, total))
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
