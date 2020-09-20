@@ -9,7 +9,7 @@ import requests
 import sqlite3
 
 # open a connection to our db and create a cursor
-conn = sqlite3.connect('DnDCompanion.db')
+conn = sqlite3.connect('DnDCompanion_Spells.db')
 c = conn.cursor();
 
 # opening the api and creating a json obj
@@ -83,12 +83,13 @@ def insertDmgType():
         # commit these changes
         conn.commit()
         
-def dropTable():
+def dropTables():
     c.execute('DROP TABLE spells')
     c.execute('DROP TABLE schools_of_magic')
     c.execute('DROP TABLE classes_spell_list')
     c.execute('DROP TABLE damage_spells')
     c.execute('DROP TABLE dmg_types')
+    c.execute('DROP TABLE healing_spells')
     
 def spellSearch(query):
     url = 'https://www.dnd5eapi.co' + query
