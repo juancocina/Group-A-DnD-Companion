@@ -1,0 +1,61 @@
+body{
+  background-color: white;
+}
+
+h1{
+  color: black;
+  font-family: system-ui, ui-monofront;
+  text-align: center;
+}
+
+h2{
+  color: black;
+  font-family: system-ui, ui-monofront;
+  text-align: center;
+  font-size: 12px;
+}
+
+h3{
+  color: black;
+  font-family: system-ui, ui-monofront;
+  text-align: left;
+  font-size: 12px;
+}
+/* this is going to be used for bold areas of the FAQ*/
+h4 {
+  color: black;
+  font-family: system, monospace;
+  text-align: left;
+  font-size: 26px
+}
+/*this is going to be used for smaller text in italics*/
+h5{
+  color: black;
+  font-family: system, monospace;
+  font-style: italic;
+  text-align: left;
+  font-size: 10px;
+}
+/* small text but not italics */
+h6{
+  color: black;
+  font-family: system, monospace;
+  text-align: left;
+  font-size: 12px;
+}
+p{
+  color: gray;
+  font-family: system-ui, ui-monofront;
+}
+
+
+
+.header {
+  border: 5px outset black;
+  background: gray;
+  text-align: center;
+}
+
+.navBar {
+  text-align: center;
+}
