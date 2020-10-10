@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- postlogin.html -->
+<html lang="en">
+<head>
+	<!-- required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie-edge">
+	
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href={{ url_for('static', filename="bootstrap/bootstrap.min.css") }}/>
+	
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href={{ url_for('stat'ic', filename="css/post-login.css") }}/>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+		<img class="mb-4" src="assets/logov2.png" alt="logov2" width="50" height="50" style="vertical-align:middle">
+		<a class="navbar-brand" href="#">DnDEZ</a>
+		
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+		</button>
+
+	<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+	  <ul class="navbar-nav mr-auto">
+		<li class="nav-item active">
+			<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#">Link</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+		</li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Dropdown</a>
+			<div class="dropdown-menu" aria-labelledby="dropdown01">
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="dropdown-item" href="#">Another action</a>
+				<a class="dropdown-item" href="#">Something else here</a>
+			</div>
+		</li>
+	  </ul>
+	  
+	</div>
+</nav>
+
+<main role="main">
+
+  <!-- Main jumbotron -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Welcome</h1>
+      <p>All the tools you need, all in one place.
+	  <hr> If you're new to Dungeons and Dragons, be sure to check out our FAQ / How-To-Play for an introduction to the game.</p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">FAQ / How-To-Play &raquo;</a></p>
+    </div>
+  </div>
+
+  <div class="container">
+	<!-- Columns for dungeon master, player, and character suite -->
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Dungeon Master</h2>
+        <p>If you're the chosen Dungeon Master, you'll find all the necessary tools to 
+		ensure everyone has a good time.</p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>Player</h2>
+        <p>Join a campain lobby and choose your character!</p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>Character Suite</h2>
+        <p>Here you'll be able access all D&D 5E character options
+			and pinpoint exactly who you want to be.</p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+    </div>
+
+    <hr>
+
+  </div> <!-- /container -->
+
+</main>
+
+<footer class="container">
+  <p>DnDEZ - CPSC 362, Group A</p>
+</footer>
+
+</body>
+</html>
