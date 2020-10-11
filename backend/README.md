@@ -51,6 +51,6 @@ To deactivate the virtual environment issue the command:
 deactivate
 ```
 
-1. Set up database by running database.py
-2. Run main.py
+1. Set up database by running python3 database.py
+2. Run python3 main.py
 3. Enter localhost:5000 in the browser.
