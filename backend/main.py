@@ -38,7 +38,15 @@ def root():
 
 @app.route("/test")
 def test():
-    return render_template('test.html')
+    return render_template('welcome.html')
+
+@app.route("/test_login_page")
+def test_login():
+    return render_template('test_login_page.html')
+
+@app.route("/test_base")
+def test_base():
+    return render_template('base.html')
 
 @app.route("/add")
 def admin():
