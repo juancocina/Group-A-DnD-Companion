@@ -6,7 +6,7 @@
 		<meta name="description" content=""/>
 		<meta name="autor" content="Joshua Nathan - Juan Cocina" />
 		<title> Scroll 20 </title>
-		<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico'} }}" />
+		<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}" />
 		<!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -42,30 +42,104 @@
 				</div>
 			</div>
 		</header>
-		<!-- FAQ --> <!-- using about-section class to fill out the following section -->
-		<header class="about-section text-center" id="about">
-			<div class="container">
-				
-				<div class="section-title" data-aos="fade-up">
-					<h2></h2>
-				</div>
-				
-				<div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-					<div class="col-lg-5">
-						<i class="ri-question-line"></i>
-						<h4>What is DnDez?</h4>
+		<!-- END Masthead -->
+
+		<!-- FAQ Section -->
+		<section class="projects-section" style="background-color: #333333;" id="projects">
+			<div class="parallax">
+				<div class="container" style="padding-top: 15%; padding-bottom: 15%;">
+
+					<div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+						<div class="col-lg-6">
+							<div class="bg-black text-center h-100 project">
+								<div class="d-flex h-100">
+									<div class="project-text w-100 my-auto text-center text-lg-left">
+											<h4 class="text-white">What is DnDez?</h4>
+											<p class="mb-0 text-white-50">
+												A Companion Web App to use alongside a game of Dungeons and Dragons.
+											</p>
+											<hr class="d-none d-lg-block mb-0 ml-0" />
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="col-lg-7">
-						<p>
-							A Companion Web App to use alongside a game of Dungeons and Dragons.
-						</p>
+					<!-- End FAQ item -->
+
+					<div class="row justify-content-center no-gutters">
+						<div class="col-lg-6 order-lg-first">
+							<div class="bg-black text-center h-100 project">
+								<div class="d-flex h-100">
+									<div class="project-text w-100 my-auto text-center text-lg-right">
+										<h4 class="text-white">What does DnDez do?</h4>
+										<p class="mb-0 text-white-50">
+											Provides a set of modules, such as Dice Roller or Combat Tracker, to help D&D sessions run efficiently.
+										</p>
+										<hr class="d-none d-lg-block mb-0 mr-0" />
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
+					<!-- End FAQ item -->
+
+					<div class="row justify-content-center no-gutters">
+						<div class="col-lg-6 order-lg-first">
+							<div class="bg-black text-center h-100 project">
+								<div class="d-flex h-100">
+									<div class="project-text w-100 my-auto text-center text-lg-left">
+										<h4 class="text-white">How do I start?</h4>
+										<p class="mb-0 text-white-50">
+											Create an account is Step Number 1. Once that's done, set up a character in our Character Suite.
+											Then, set up a room as Dungeon Master or join one as a Player!
+										</p>
+										<hr class="d-none d-lg-block mb-0 mr-0" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End FAQ item -->
+
+					<div class="row justify-content-center no-gutters">
+						<div class="col-lg-6 order-lg-first">
+							<div class="bg-black text-center h-100 project">
+								<div class="d-flex h-100">
+									<div class="project-text w-100 my-auto text-center text-lg-right">
+										<h4 class="text-white">What if I don't know how to play?</h4>
+										<p class="mb-0 text-white-50">
+											Check out our How-To-Play page, or, have an experienced player take you under their wing!
+										</p>
+										<hr class="d-none d-lg-block mb-0 mr-0" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End FAQ item -->
+
+					<div class="row justify-content-center no-gutters">
+						<div class="col-lg-6 order-lg-first">
+							<div class="bg-black text-center h-100 project">
+								<div class="d-flex h-100">
+									<div class="project-text w-100 my-auto text-center text-lg-left">
+										<h4 class="text-white">Anything else?</h4>
+										<p class="mb-0 text-white-50">
+											Immerse yourself, drink responsibly, and most importantly, have fun!
+										</p>
+										<hr class="d-none d-lg-block mb-0 mr-0" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End FAQ item -->
+
 				</div>
-				<!-- End FAQ item -->
-			
 			</div>
-		</header>
-				
+		</section>
+
+
  <!-- Footer-->
         <footer class="footer bg-black small text-center text-white-50">
             <div class="container text-center text-md-left">
@@ -100,7 +174,7 @@
                 </div>
 
             </div>
-    
+
                 <div class="row-fluid" style="padding-left: 10%">
                     <div class="col-md-4 text-left">
                         <h6 class="font-weight-bold text-uppercase mt-3 mb-4">©2020 Scroll20 Ltd</h6>
@@ -108,7 +182,7 @@
                         <a href="" style="padding-left: 20px">Terms</a>
                     </div>
                 </div>
-   
+
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -119,6 +193,3 @@
         <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
     </body>
 </html>
-
-						
-					
