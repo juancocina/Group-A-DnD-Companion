@@ -1,6 +1,3 @@
-target:
-	cd /schemas 
-
 create:
 	sqlite3 ../db/character.db < character.sql
 	sqlite3 ../db/feats.db < feats.sql
