@@ -1,6 +1,6 @@
 function validate() {
     var pass = document.getElementById("password").value;
-    var cpass = document.getElementById("cpassword").value;
+    var cpass = document.getElementById("confirmpassword").value;
     if (pass == cpass) {
         return true;
     } else {

@@ -1,56 +1,26 @@
-# Shopping Cart  
-A simple E-commerce website using Flask.
+# DnDEZ  
+DnDEZ web app for managing sessions with other players
 
-Project designed to be ran in ubuntu 20.04 or greater. 
-  
 ## Dependencies ##
-1. Python3.6 or greater
-2. Everything in "requirements.txt"
-3. Sqlite3 apt package 
-```bash
-sudo apt-get install sqlite3
-```
+1. python3.8 or greater 
+2. everything in requirements.txt
+3. Sqlite3
+4. foreman (install how-to: https://github.com/ddollar/foreman)
+5. GNU make
 
 ## How to run ##
-This portion is best set up using python venvs
 
-Make sure you have pip3 installed and the python3 venv module installed 
+# (note: this project is inteded to be developed in a python venv)
+1. Install venv for your python version (pip3 install virtualenv)
+2. Create a virtual environment (python3.x -m venv put_name_here)
+3. navigate into the new folder (cd folderName)
+4. activate the venv (source bin/activate)
+5. clone this repo 
+6. cd into the repo and install the requirements (pip3 install -r requirements.txt)
+7. navigate to the /database/schemas folder 
+8. make
+9. navigate to the /backend folder 
+10. Change the value of "FLASK_RUN_HOST" in the .env file to your preffered address (by default it should be localhost)
+11. run "foreman start -p 5000" (this runs the webapp on port 5000, you can change the value after "-p" to change the port number)
 
-```bash
-sudo apt install python3-pip
-
-sudo apt install -y python3-venv
-```
-
-Navigate to a directory you want the project in
-
-To create a venv run:
-
-```bash
-python3.x -m venv ProjectFolderName
-```
-Where "x" is the python3 version desired and "ProjectFolderName" is the name of the project folder
-
-To enable your python virtual environment cd into the projectfoldername and use:
-
-```bash
-source bin/activate
-```
-
-Your shell should now indicate your env setting being the project 
-
-You can now install dependencies with pip by navigating to the same directory and requirements.txt and running:
-
-```bash
-pip3 install -r requirements.txt
-```
-
-To deactivate the virtual environment issue the command:
-
-```bash
-deactivate
-```
-
-1. Set up database by running python3 database.py
-2. Run python3 main.py
-3. Enter localhost:5000 in the browser.
+You should now be able to access the app on http://localhost:5000 (or whatever values you used for .env and -p)
