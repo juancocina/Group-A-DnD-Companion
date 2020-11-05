@@ -10,7 +10,7 @@ DnDEZ web app for managing sessions with other players
 
 ## How to run ##
 
-# (note: this project is inteded to be developed in a python venv)
+### (note: this project is inteded to be developed in a python venv) ###
 1. Install venv for your python version (pip3 install virtualenv)
 2. Create a virtual environment (python3.x -m venv put_name_here)
 3. navigate into the new folder (cd folderName)
