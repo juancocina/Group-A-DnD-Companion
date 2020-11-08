@@ -1,9 +1,7 @@
-DND COMPANION APP
-
-Project Name: 
+# DND COMPANION APP
 DnDEZ
 
-Members:
+## Members
 Juan Cocina
 Benjamin Fuller
 Stephen Lee
