@@ -167,7 +167,7 @@ def is_valid(email, password):
 # @app.route("/register", methods = ['GET', 'POST'])
 # def register():
 #     if request.method == 'POST':
-#         #Parse form data    
+#         #Parse form data
 #         password = request.form['password']
 #         email = request.form['email']
 #         firstName = request.form['firstName']
@@ -199,6 +199,17 @@ def is_valid(email, password):
 # @app.route("/registerationForm")
 # def registrationForm():
 #     return render_template("register.html")
+
+# testing page communication ---- Juan
+@app.route("/faq")
+def faq():
+    return render_template("faq.html")
+
+@app.route("/howtoplay")
+def howtoplay():
+    return render_template("howtoplay.html")
+
+# End of testing page communication...
 
 def allowed_file(filename):
     return '.' in filename and \

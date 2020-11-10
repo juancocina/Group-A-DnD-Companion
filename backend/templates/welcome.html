@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="Joshua Nathan" />
-        <title>Scroll 20</title>
+        <title>DnDEZ</title>
         <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
@@ -19,7 +19,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-inverse fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger text-white-50" href="#page-top">Scroll 20</a>
+                <a class="navbar-brand js-scroll-trigger text-white-50" href="#page-top">DnDEZ</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -28,6 +28,7 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="/faq">FAQ</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="#signup">Contact</a></li>
                     </ul>
                 </div>
@@ -37,7 +38,7 @@
         <header class="masthead">
             <div class="container d-flex h-100 align-items-center">
                 <div class="mx-auto text-center">
-                    <h1 class="mx-auto my-0 text-uppercase">Scroll 20</h1>
+                    <h1 class="mx-auto my-0 text-uppercase">DnDEZ</h1>
                     <h2 class="text-white-50 mx-auto mt-2 mb-5">Everything you need for playing the game, all in one place.</h2>
                     <a class="btn btn-primary js-scroll-trigger" href="/register">Sign Up</a>
                     <a class="btn btn-secondary js-scroll-trigger" href='/login'>Log In</a>
@@ -52,7 +53,7 @@
                         <h2 class="text-white mb-4">One Place To Manage Everything</h2>
                         <h3 class="text-white">From campaigns to characters</h3>
                         <p class="text-white-50">
-                            Scroll 20 is an all-in-one web app to keep track of characters, sessions, and campaigns. 
+                            Scroll 20 is an all-in-one web app to keep track of characters, sessions, and campaigns.
                             Start a new campaign or continue an existing one with your own custom characters and
                             custom maps. All updated in real time.
                         </p>
@@ -63,11 +64,11 @@
                         <div class="col-lg-6 mx-auto">
                             <h3 class="text-white mb-3">No computer? No problem.</h3>
                             <p class="text-white-50">
-                                Scroll 20 allows users to join, create, and make from most mobile web browsers. 
+                                Scroll 20 allows users to join, create, and make from most mobile web browsers.
                                 No need to fill your inventory with extra weight!
                             </p>
                             <h3 class="text-white mb-2">Questions?</h3>
-                            <p class="text-white-50">Check out our F.A.Q for more information and how to get started.<a class="btn btn-primary" style="margin: 35px" href=''>FAQ</a></p>
+                            <p class="text-white-50">Check out our F.A.Q for more information and how to get started.<a class="btn btn-primary" style="margin: 35px" href="/faq">FAQ</a></p>
                         </div>
                         <div class="col-lg-6 mx-auto">
                             <img class="img-fluid" src="{{url_for('static', filename='images/ipad.png')}}" alt=""/>
@@ -127,7 +128,7 @@
                         </div>
                     </div>
                 </div>
-            </div>    
+            </div>
         </section>
         <!-- Signup-->
 
@@ -174,10 +175,10 @@
                 <div class="row">
                     <hr class="clearfix w-100 d-md-none">
                     <div class="col-md-2 mx-auto">
-                        <h4 class="font-weight-bold text-uppercase mt-3 mb-4">Scroll20</h4>
+                        <h4 class="font-weight-bold text-uppercase mt-3 mb-4">DnDEZ</h4>
                         <ul class="list-unstyled">
                             <li>
-                                <a href="">About</a>
+                                <a href="#about">About</a>
                             </li>
                             <li>
                                 <a href="">Blog</a>
@@ -192,25 +193,25 @@
                         <h4 class="font-weight-bold text-uppercase mt-3 mb-4">Support</h4>
                         <ul class="list-unstyled">
                             <li>
-                                <a href="">FAQ</a>
+                                <a href="/faq">FAQ</a>
                             </li>
                             <li>
-                                <a href="">Getting Started</a>
+                                <a href="/howtoplay">Getting Started</a>
                             </li>
                         </ul>
                     </div>
                 </div>
 
             </div>
-    
+
                 <div class="row-fluid" style="padding-left: 10%">
                     <div class="col-md-4 text-left">
-                        <h6 class="font-weight-bold text-uppercase mt-3 mb-4">©2020 Scroll20 Ltd</h6>
+                        <h6 class="font-weight-bold text-uppercase mt-3 mb-4">©2020 DnDEZ</h6>
                         <a href="" style="padding-right: 20px">Privacy</a>
                         <a href="" style="padding-left: 20px">Terms</a>
                     </div>
                 </div>
-   
+
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
