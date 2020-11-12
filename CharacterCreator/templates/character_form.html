@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>DnD-EZ Character Creation Form</title>
+
+    <!-- Icons font CSS-->
+    <link href="../static/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="../static/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="../static/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="../static/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="../static/css/main.css" rel="stylesheet" media="all">
+
+</head>
+
+<body>
+    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-1">
+                <div class="card-heading">
+                </div>
+                <div class="card-body">
+                    <h2 class="title">Create Your Character</h2>
+
+                    <!-- Form -->
+                    <form method="POST">
+
+                        <!-- Character Info -->
+                        <h3 class="title">Character Info</h3>
+
+                        <!-- Character Name -->
+                        <div class="input-group">
+                            <input class="input--style-1" type="text" placeholder="CHARACTER NAME" name="name" required>
+                        </div>
+                        
+                        <!-- Race -->
+                        <div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="race" required>
+                                    <option disabled="disabled" selected="selected">RACE</option>
+                                    <option>Dragonborn</option>
+                                    <option>Dwarf</option>
+                                    <option>Elf</option>
+                                    <option>Gnome</option>
+                                    <option>Half-Elf</option>
+                                    <option>Half-Orc</option>
+                                    <option>Halfling</option>
+                                    <option>Human</option>
+                                    <option>Tiefling</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Language -->
+                        <div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select id="language" name="lang" required>
+                                    <option disabled="disabled" selected="selected">SELECT AN ADDITIONAL LANGUAGE</option>
+                                    <option>Dragonborn</option>
+                                    <option>Dwarf</option>
+                                    <option>Elf</option>
+                                    <option>Gnome</option>
+                                    <option>Half-Elf</option>
+                                    <option>Half-Orc</option>
+                                    <option>Halfling</option>
+                                    <option>Human</option>
+                                    <option>Tiefling</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Language -->
+                        <div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select id="language" name="lang" required>
+                                    <option disabled="disabled" selected="selected">SELECT AN ADDITIONAL LANGUAGE</option>
+                                    <option>Dragonborn</option>
+                                    <option>Dwarf</option>
+                                    <option>Elf</option>
+                                    <option>Gnome</option>
+                                    <option>Half-Elf</option>
+                                    <option>Half-Orc</option>
+                                    <option>Halfling</option>
+                                    <option>Human</option>
+                                    <option>Tiefling</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+
+                        <!-- Class -->
+                        <div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="class" required>
+                                    <option disabled="disabled" selected="selected">CLASS</option>
+                                    <option>Barbarian</option>
+                                    <option>Bard</option>
+                                    <option>Cleric</option>
+                                    <option>Druid</option>
+                                    <option>Fighter</option>
+                                    <option>Monk</option>
+                                    <option>Paladin</option>
+                                    <option>Ranger</option>
+                                    <option>Rogue</option>
+                                    <option>Sorcerer</option>
+                                    <option>Warlock</option>
+                                    <option>Wizard</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+
+                        <!-- Background -->
+                        <div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="background" required>
+                                    <option disabled="disabled" selected="selected">BACKGROUND</option>
+                                    <option>Acolyte</option>
+                                    <option>Charlatan</option>
+                                    <option>Criminal</option>
+                                    <option>Entertainer</option>
+                                    <option>Folk Hero</option>
+                                    <option>Gladiator</option>
+                                    <option>Guild Artisan</option>
+                                    <option>Hermit</option>
+                                    <option>Knight</option>
+                                    <option>Noble</option>
+                                    <option>Outlander</option>
+                                    <option>Sage</option>
+                                    <option>Sailor</option>
+                                    <option>Soldier</option>
+                                    <option>Urchin</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+
+                        <!-- Alignment -->
+                        <div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="alignment" required>
+                                    <option disabled="disabled" selected="selected">ALIGNMENT</option>
+                                    <option>Lawful Good (Crusader)</option>
+                                    <option>Neutral Good (Benefactor)</option>
+                                    <option>Chaotic Good (Rebel)</option>
+                                    <option>Lawful Neutral (Judge)</option>
+                                    <option>Neutral Neutral (Undecided)</option>
+                                    <option>Chaotic Neutral (Free Spirit)</option>
+                                    <option>Lawful Evil (Dominator)</option>
+                                    <option>Neutral Evil (Malefactor)</option>
+                                    <option>Chaotic Evil (Destroyer)</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+
+                        <!-- Character Description -->
+                        <h3 class="title">Character Description</h3>
+
+                        <!-- Age -->
+                        <div class="input-group">
+                            <label class = "col-1">Age: </label>
+                            <input class="input--style-1" type="text" name="age" required>
+                        </div>
+                        
+                        <!-- Height -->
+                        <div class="input-group">
+                            <label class = "col-1">Height: </label>
+                            <input class="input--style-1" type="text" name="hgt" required>
+                        </div>
+
+                        <!-- Weight -->
+                        <div class="input-group">
+                            <label class = "col-1">Weight: </label>
+                            <input class="input--style-1" type="text" name="wgt" required>
+                        </div>
+
+                        <!-- Eyes -->
+                        <div class="input-group">
+                            <label class = "col-1">Eyes: </label>
+                            <input class="input--style-1" type="text" name="eye" required>
+                        </div>
+
+                        <!-- Skin -->
+                        <div class="input-group">
+                            <label class = "col-1">Skin: </label>
+                            <input class="input--style-1" type="text" name="skin" required>
+                        </div>
+
+                        <!-- Hair -->
+                        <div class="input-group">
+                            <label class = "col-1">Hair: </label>
+                            <input class="input--style-1" type="text" name="hair" required>
+                        </div>
+                        
+                        <!-- Character Stats -->
+                        <h3 class="title">Character Stats</h3>
+                        <h4 class="title">* Stats can only be from 1-20</h4>
+
+                        <!-- Strength -->
+                        <div class="input-group">
+                            <label class = "col-1">Strength: </label>
+                            <input class="input--style-1" type="number" min="1" max="20" step="1" name="str" required>
+                        </div>
+                        
+                        <!-- Dexterity -->
+                        <div class="input-group">
+                            <label class = "col-1">Dexterity: </label>
+                            <input class="input--style-1" type="number" min="1" max="20" step="1" name="dex" required>
+                        </div>
+
+                        <!-- Constitution -->
+                        <div class="input-group">
+                            <label class = "col-1">Constitution: </label>
+                            <input class="input--style-1" type="number" min="1" max="20" step="1" name="con" required>
+                        </div>
+
+                        <!-- Intelligence -->
+                        <div class="input-group">
+                            <label class = "col-1">Intelligence: </label>
+                            <input class="input--style-1" type="number" min="1" max="20" step="1" name="int" required>
+                        </div>
+
+                        <!-- Wisdom -->
+                        <div class="input-group">
+                            <label class = "col-1">Wisdom: </label>
+                            <input class="input--style-1" type="number" min="1" max="20" step="1" name="wis" required>
+                        </div>
+
+                        <!-- Charisma -->
+                        <div class="input-group">
+                            <label class = "col-1">Charisma: </label>
+                            <input class="input--style-1" type="number" min="1" max="20" step="1" name="cha" required>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="p-t-20">
+                            <button class="btn btn--radius btn--green" type="submit">Create</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="../static/vendor/select2/select2.min.js"></script>
+
+    <!-- Main JS-->
+    <script src="../static/js/global.js"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->
