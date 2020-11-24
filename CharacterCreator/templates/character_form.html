@@ -43,15 +43,17 @@
                         <h3 class="title">Character Info</h3>
 
                         <!-- Character Name -->
+                        <label class = "col-1">Enter Character Name: </label>
                         <div class="input-group">
-                            <input class="input--style-1" type="text" placeholder="CHARACTER NAME" name="name" required>
+                            <input class="input--style-1" type="text" name="name" required>
                         </div>
                         
+                        <label class = "col-1">Select Race: </label>
                         <!-- Race -->
                         <div class="input-group">
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="race" required>
-                                    <option disabled="disabled" selected="selected">RACE</option>
+                                <select name="race" id="id_race" required>
+                                    <option disabled="disabled" selected="selected"></option>
                                     <option>Dragonborn</option>
                                     <option>Dwarf</option>
                                     <option>Elf</option>
@@ -67,48 +69,62 @@
                         </div>
 
                         <!-- Additional Language -->
+                        <!-- more options modified in JS -->
+                        <label class = "col-1">Select an Additional Language: </label><br>
+                        <label class = "col-1 note">Choose one only if you are Half-Elf or Human Race</label>
                         <div class="input-group">
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select id="language" name="lang" required>
-                                    <option disabled="disabled" selected="selected">SELECT AN ADDITIONAL LANGUAGE</option>
-                                    <option>Dragonborn</option>
-                                    <option>Dwarf</option>
-                                    <option>Elf</option>
-                                    <option>Gnome</option>
-                                    <option>Half-Elf</option>
-                                    <option>Half-Orc</option>
+                                <select name="language">
+                                    <option selected="selected">No Additional Language</option>
+                                    <option>Dwarvish</option>
+                                    <option value="Elvish">Elvish (don't choose if you are Half-Elf)</option>
+                                    <option>Giant</option>
+                                    <option>Gnomish</option>
+                                    <option>Goblin</option>
                                     <option>Halfling</option>
-                                    <option>Human</option>
-                                    <option>Tiefling</option>
+                                    <option>Orcish</option>
+                                    <option>Abyssal</option>
+                                    <option>Celestial</option>
+                                    <option>Draconic</option>
+                                    <option>Deep Speech</option>
+                                    <option>Infernal</option>
+                                    <option>Primordial</option>
+                                    <option>Sylvan</option>
+                                    <option>Undercommon</option>
                                 </select>
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
 
-                        <!-- Additional Language -->
+                        <!-- Additional Trait -->
+                        <!-- more options modified in JS -->
+                        <label class = "col-1">Check Additional Trait: </label><br>
+                        <label class = "col-1 note">Select only if you are Dragonborn Race</label>
                         <div class="input-group">
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select id="language" name="lang" required>
-                                    <option disabled="disabled" selected="selected">SELECT AN ADDITIONAL LANGUAGE</option>
-                                    <option>Dragonborn</option>
-                                    <option>Dwarf</option>
-                                    <option>Elf</option>
-                                    <option>Gnome</option>
-                                    <option>Half-Elf</option>
-                                    <option>Half-Orc</option>
-                                    <option>Halfling</option>
-                                    <option>Human</option>
-                                    <option>Tiefling</option>
+                                <select name="trait">
+                                    <option selected="selected">No Additional Trait</option>
+                                    <option>Breath Weapon (Black)</option>
+                                    <option>Breath Weapon (Blue)</option>
+                                    <option>Breath Weapon (Brass)</option>
+                                    <option>Breath Weapon (Bronze)</option>
+                                    <option>Breath Weapon (Copper)</option>
+                                    <option>Breath Weapon (Gold)</option>
+                                    <option>Breath Weapon (Green)</option>
+                                    <option>Breath Weapon (Red)</option>
+                                    <option>Breath Weapon (Silver)</option>
+                                    <option>Breath Weapon (White)</option>
                                 </select>
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
 
                         <!-- Class -->
+                        <label class = "col-1">Select Class: </label>
                         <div class="input-group">
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="class" required>
-                                    <option disabled="disabled" selected="selected">CLASS</option>
+                                <select name="class" id="id_class" required>
+                                    <option disabled="disabled" selected="selected"></option>
                                     <option>Barbarian</option>
                                     <option>Bard</option>
                                     <option>Cleric</option>
@@ -126,11 +142,59 @@
                             </div>
                         </div>
 
+                        <!-- Additional Profession -->
+                        <!-- more options modified in JS -->
+                        <label class = "col-1">Choose Your Proficiency(s): </label> <br><br>
+                        <label class = "col-1" id="number">Select a Class First</label>
+                        <div class="check-group">
+                            <input class="chk cl1 cl2 cl4 cl5 cl8" type="checkbox" name="proficiency" value="Skill: Animal Handling" disabled/>Skill: Animal Handling<br>
+                            <input class="chk cl1 cl2 cl5 cl7 cl8 cl9" type="checkbox" name="proficiency" value="Skill: Athletics" disabled/>Skill: Athletics<br>
+                            <input class="chk cl1 cl2 cl5 cl7 cl9 cl10 cl11" type="checkbox" name="proficiency" value="Skill: Intimidation" disabled/>Skill: Intimidation<br>
+                            <input class="chk cl1 cl4 cl11" type="checkbox" name="proficiency" value="Skill: Nature" disabled/>Skill: Nature<br>
+                            <input class="chk cl1 cl4 cl5" type="checkbox" name="proficiency" value="Skill: Perception" disabled/>Skill: Perception<br>
+                            <input class="chk cl1" type="checkbox" name="proficiency" value="Skill: Survival" disabled/>Skill: Survival<br>
+                            <input class="chk cl2 cl5 cl9" type="checkbox" name="proficiency" value="Skill: Acrobatics" disabled/>Skill: Acrobatics<br>
+                            <input class="chk cl2 cl4 cl10 cl11 cl12" type="checkbox" name="proficiency" value="Skill: Arcana" disabled/>Skill: Arcana<br>
+                            <input class="chk cl2 cl9 cl10 cl11" type="checkbox" name="proficiency" value="Skill: Deception" disabled/>Skill: Deception<br>
+                            <input class="chk cl2 cl3 cl5 cl11 cl12" type="checkbox" name="proficiency" value="Skill: History" disabled/>Skill: History<br>
+                            <input class="chk cl2 cl3 cl4 cl5 cl7 cl8 cl9 cl10 cl12" type="checkbox" name="proficiency" value="Skill: Insight" disabled/>Skill: Insight<br>
+                            <input class="chk cl2 cl8 cl9 cl11 cl12" type="checkbox" name="proficiency" value="Skill: Investigation" disabled/>Skill: Investigation<br>
+                            <input class="chk cl2 cl3 cl4 cl7 cl12" type="checkbox" name="proficiency" value="Skill: Medicine" disabled/>Skill: Medicine<br>
+                            <input class="chk cl2 cl8" type="checkbox" name="proficiency" value="Skill: Nature" disabled/>Skill: Nature<br>
+                            <input class="chk cl2 cl8 cl9" type="checkbox" name="proficiency" value="Skill: Perception" disabled/>Skill: Perception<br>
+                            <input class="chk cl2 cl9" type="checkbox" name="proficiency" value="Skill: Performance" disabled/>Skill: Performance<br>
+                            <input class="chk cl2 cl3 cl7 cl9 cl10" type="checkbox" name="proficiency" value="Skill: Persuasion" disabled/>Skill: Persuasion<br>
+                            <input class="chk cl2 cl3 cl4 cl7 cl10 cl11 cl12" type="checkbox" name="proficiency" value="Skill: Religion" disabled/>Skill: Religion<br>
+                            <input class="chk cl2 cl9" type="checkbox" name="proficiency" value="Skill: Sleight of Hand" disabled/>Skill: Sleight of Hand<br>
+                            <input class="chk cl2 cl8 cl9" type="checkbox" name="proficiency" value="Skill: Stealth" disabled/>Skill: Stealth<br>
+                            <input class="chk cl2 cl4 cl5 cl8" type="checkbox" name="proficiency" value="Skill: Survival" disabled/>Skill: Survival<br>
+                            <input class="chk cl6" type="checkbox" name="proficiency" value="Alchemist's supplies" disabled/>Alchemist's supplies<br>
+                            <input class="chk cl6" type="checkbox" name="proficiency" value="Brewer's supplies" disabled/>Brewer's supplies<br>
+                            <input class="chk cl6" type="checkbox" name="proficiency" value="Calligrapher's supplies" disabled/>Calligrapher's supplies<br>
+                            <input class="chk cl6" type="checkbox" name="proficiency" value="Carpenter's tools" disabled/>Carpenter's tools<br>
+                            <input class="chk cl6" type="checkbox" name="proficiency" value="Cartographer's tools" disabled/>Cartographer's tools<br>
+                            <input class="chk cl6" type="checkbox" name="proficiency" value="Cobbler's tools" disabled/>Cobbler's tools<br>
+                            <input class="chk cl6" type="checkbox" name="proficiency" value="Cook's utensils" disabled/>Cook's utensils<br>
+                            <input class="chk cl6" type="checkbox" name="proficiency" value="Glassblower's tools" disabled/>Glassblower's tools<br>
+                            <input class="chk cl6" type="checkbox" name="proficiency" value="Jeweler's tools" disabled/>Jeweler's tools<br>
+                            <input class="chk cl6" type="checkbox" name="proficiency" value="Leatherworker's tools" disabled/>Leatherworker's tools<br>
+                            <input class="chk cl6" type="checkbox" name="proficiency" value="Mason's tools" disabled/>Mason's tools<br>
+                            <input class="chk cl6" type="checkbox" name="proficiency" value="Painter's supplies" disabled/>Painter's supplies<br>
+                            <input class="chk cl6" type="checkbox" name="proficiency" value="Potter's tools" disabled/>Potter's tools<br>
+                            <input class="chk cl6" type="checkbox" name="proficiency" value="Smith's tools" disabled/>Smith's tools<br>
+                            <input class="chk cl6" type="checkbox" name="proficiency" value="Tinker's tools" disabled/>Tinker's tools<br>
+                            <input class="chk cl6" type="checkbox" name="proficiency" value="Weaver's tools" disabled/>Weaver's tools<br>
+                            <input class="chk cl6" type="checkbox" name="proficiency" value="Woodcarver's tools" disabled/>Woodcarver's tools<br>
+                            <input class="chk cl6" type="checkbox" name="proficiency" value="Disguise kit" disabled/>Disguise kit<br>
+                            <input class="chk cl6" type="checkbox" name="proficiency" value="Forgery kit" disabled/>Forgery kit<br>
+                        </div>
+
                         <!-- Background -->
+                        <label class = "col-1">Select Background: </label>
                         <div class="input-group">
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="background" required>
-                                    <option disabled="disabled" selected="selected">BACKGROUND</option>
+                                    <option disabled="disabled" selected="selected"></option>
                                     <option>Acolyte</option>
                                     <option>Charlatan</option>
                                     <option>Criminal</option>
@@ -152,10 +216,11 @@
                         </div>
 
                         <!-- Alignment -->
+                        <label class = "col-1">Select Alignment: </label>
                         <div class="input-group">
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="alignment" required>
-                                    <option disabled="disabled" selected="selected">ALIGNMENT</option>
+                                    <option disabled="disabled" selected="selected"></option>
                                     <option>Lawful Good (Crusader)</option>
                                     <option>Neutral Good (Benefactor)</option>
                                     <option>Chaotic Good (Rebel)</option>
@@ -172,6 +237,12 @@
 
                         <!-- Character Description -->
                         <h3 class="title">Character Description</h3>
+
+                        <!-- Gender -->
+                        <div class="input-group">
+                            <label class = "col-1">Gender: </label>
+                            <input class="input--style-1" type="text" name="gender" required>
+                        </div>
 
                         <!-- Age -->
                         <div class="input-group">
@@ -207,6 +278,12 @@
                         <div class="input-group">
                             <label class = "col-1">Hair: </label>
                             <input class="input--style-1" type="text" name="hair" required>
+                        </div>
+
+                        <!-- Faith -->
+                        <div class="input-group">
+                            <label class = "col-1">Faith: </label>
+                            <input class="input--style-1" type="text" name="faith" required>
                         </div>
                         
                         <!-- Character Stats -->
@@ -263,6 +340,9 @@
     <script src="../static/vendor/jquery/jquery.min.js"></script>
     <!-- Vendor JS-->
     <script src="../static/vendor/select2/select2.min.js"></script>
+
+    <!-- Form JS-->
+    <script src="../static/js/character_form.js"></script>
 
     <!-- Main JS-->
     <script src="../static/js/global.js"></script>

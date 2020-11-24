@@ -290,6 +290,13 @@ input {
   border-bottom: 2px solid #ccc;
 }
 
+.input-group-hide {
+  display: none;
+  position: relative;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #ccc;
+}
+
 .input-icon {
   position: absolute;
   font-size: 18px;
@@ -449,6 +456,14 @@ input {
   padding: 0 90px;
   padding-top: 55px;
   padding-bottom: 65px;
+}
+
+.check-group {
+  margin-bottom: 3em;
+}
+
+#number, .note {
+  font-weight: bold;
 }
 
 @media (max-width: 767px) {
