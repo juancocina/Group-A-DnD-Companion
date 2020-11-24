@@ -66,7 +66,7 @@ a = plticker.MultipleLocator(base=myInterval)
 ax.xaxis.set_major_locator(a)
 ax.yaxis.set_major_locator(a)
 
-ax.grid(which='major', axis='both', linestyle='-', color='white')
+ax.grid(which='major', axis='both', linestyle='-', color='white', linewidth=1)
 
 ax.imshow(background)
 
