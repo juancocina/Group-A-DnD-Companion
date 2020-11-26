@@ -7,7 +7,7 @@ from PIL import Image
 from scipy.misc import imsave
 
 shape = (800, 800)
-scale = 250         # higher zoomed in factor = higher number
+scale = 300         # higher zoomed in factor = higher number
 octaves = 6         # number of layers
 persistence = 0.5   # amplitude that each octave contributes to overall shape
 lacunarity = 2.0    # frequency of detail at each octave
@@ -85,9 +85,9 @@ def add_color(world):
 
 
 color_world = add_color(world)
-imsave('colorworld1.png', color_world)
+imsave('forest.png', color_world)
 
-background = Image.open('colorworld1.png')
+background = Image.open('forest.png')
 my_dpi = 200  # set screen dots per inch
 
 grid = plt.figure(figsize=(float(background.size[0]) / my_dpi, float(background.size[1]) / my_dpi), dpi=my_dpi)
@@ -100,11 +100,11 @@ a = plticker.MultipleLocator(base=myInterval)
 ax.xaxis.set_major_locator(a)
 ax.yaxis.set_major_locator(a)
 
-ax.grid(which='major', axis='both', linestyle='-', color='black')
+ax.grid(which='major', axis='both', linestyle='-', color='black', linewidth=1)
 
 ax.imshow(background)
 
-grid.savefig('colorworld1_grid.png', dpi=my_dpi)
+grid.savefig('forest_grid.png', dpi=my_dpi)
 
-im = Image.open('colorworld1_grid.png')
+im = Image.open('forest_grid.png')
 im.show()

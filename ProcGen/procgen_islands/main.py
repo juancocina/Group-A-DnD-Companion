@@ -5,10 +5,10 @@ import matplotlib.ticker as plticker
 from PIL import Image
 from scipy.misc import imsave
 
-shape = (800, 800)
-scale = 600         # higher zoomed in factor = higher number
-octaves = 7         # number of layers
-persistence = 0.5   # amplitude that each octave constributes to overall shape
+shape = (800, 800)  # USER OPTIONAL: output size (x,y)
+scale = 400         # USER OPTIONAL: higher zoomed in factor = higher number
+octaves = 7         # USER OPTIONAL: number of layers; more layers = more detail added
+persistence = 0.5   # amplitude that each octave contributes to overall shape
 lacunarity = 2.0    # frequency of detail at each octave
 seed = np.random.randint(0, 100)
 
@@ -53,19 +53,21 @@ color_world = add_color(world)
 imsave('islands.png', color_world)
 
 background = Image.open('islands.png')
-my_dpi = 200  # set screen dots per inch
+my_dpi = 100  # set screen dots per inch
 
 grid = plt.figure(figsize=(float(background.size[0]) / my_dpi, float(background.size[1]) / my_dpi), dpi=my_dpi)
 ax = grid.add_subplot(111)
 
 grid.subplots_adjust(left=0, right=1, bottom=0, top=1)
 
-myInterval = 50 # each grid plot will be 100x100
+myInterval = 50 # USER OPTIONAL: each grid plot will be (myInterval x myInterval) pixels
 a = plticker.MultipleLocator(base=myInterval)
 ax.xaxis.set_major_locator(a)
 ax.yaxis.set_major_locator(a)
 
-ax.grid(which='major', axis='both', linestyle='-', color='black')
+# Adds grid to image with set values
+# USER OPTIONAL: linewidth = line thickness
+ax.grid(which='major', axis='both', linestyle='-', color='black', linewidth=1)
 
 ax.imshow(background)
 
