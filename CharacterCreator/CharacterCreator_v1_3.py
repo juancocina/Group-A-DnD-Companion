@@ -7,8 +7,8 @@
 import sqlite3
 
 # open a connection to our db and create a cursor
-conn = sqlite3.connect('DnDEZ_Character.db')
-c = conn.cursor();
+conn = sqlite3.connect('DnDEZ_Character.db', check_same_thread=False)
+c = conn.cursor()
 
 # Functions ########################################################
 # create default char
@@ -375,23 +375,31 @@ def updateStatBlock(charID, raceID, statBlock):
     # retrieve the bonus type and unit using race_id
     tempC.execute('SELECT stat_name, bonus FROM stat_bonuses WHERE race_id = ?', [raceID])
     bonusData = tempC.fetchall()
+
+    temp = []
+
+    for stat in statBlock:
+        int_var = int(stat)
+        temp.append(int_var)
     
     # update the statblock stats
     for row in bonusData:
         if row[0] == 'STR':
-            statBlock[0] += row[1]
+            temp[0] += row[1]
         elif row[0] == 'DEX':
-            statBlock[1] += row[1]
+            temp[1] += row[1]
         elif row[0] == 'CON':
-            statBlock[2] += row[1]
+            temp[2] += row[1]
         elif row[0] == 'INT':
-            statBlock[3] += row[1]
+            temp[3] += row[1]
         elif row[0] == 'WIS':
-            statBlock[4] += row[1]
+            temp[4] += row[1]
         elif row[0] == 'CHA':
-            statBlock[5] += row[1]
+            temp[5] += row[1]
         else:
             print("error - unkown type") 
+    
+    statBlock = temp
     
     # close out our cursor 
     tempC.close()
@@ -435,38 +443,47 @@ def updateStatBlock(charID, raceID, statBlock):
     conn.commit()
     
     # convert the stats into mods and update skills and saving throws
-    convertStatsToMods(statBlock)
-    updateSkills(charID, statBlock)
-    updateSavingThrows(charID, statBlock)
+    temp = convertStatsToMods(statBlock)
+    updateSkills(charID, temp)
+    updateSavingThrows(charID, temp)
     
 def convertStatsToMods(statBlock):
+
+    temp = []
+
+    for stat in statBlock:
+        int_var = int(stat)
+        temp.append(int_var)
+
     sbIndex = 0
     
-    for index in statBlock:
+    for index in temp:
         if index == 1:
-            statBlock[sbIndex] = -5
+            temp[sbIndex] = -5
         elif index == 2 or index == 3:
-            statBlock[sbIndex] = -4
+            temp[sbIndex] = -4
         elif index == 4 or index == 5:
-            statBlock[sbIndex] = -3
+            temp[sbIndex] = -3
         elif index == 6 or index == 7:
-            statBlock[sbIndex] = -2
+            temp[sbIndex] = -2
         elif index == 8 or index == 9:
-            statBlock[sbIndex] = -1
+            temp[sbIndex] = -1
         elif index == 10 or index == 11:
-            statBlock[sbIndex] = 0
+            temp[sbIndex] = 0
         elif index == 12 or index == 13:
-            statBlock[sbIndex] = 1
+            temp[sbIndex] = 1
         elif index == 14 or index == 15:
-            statBlock[sbIndex] = 2
+            temp[sbIndex] = 2
         elif index == 16 or index == 17:
-            statBlock[sbIndex] = 3
+            temp[sbIndex] = 3
         elif index == 18 or index == 19:
-            statBlock[sbIndex] = 4 
+            temp[sbIndex] = 4 
         elif index >= 20:
-            statBlock[sbIndex] = 5
+            temp[sbIndex] = 5
         
         sbIndex += 1
+
+    return temp
 
 def updateSavingThrows(charID, statBlock):
     # update str saving throw
@@ -953,7 +970,7 @@ def updateProfBonusSkills(profArray, charID):
         
         
 def updateProfBonusSavingThrows(charID, classID):
-        # get lvl
+    # get lvl
     lvl = getLvl(charID)
     
     # get prof bonus
