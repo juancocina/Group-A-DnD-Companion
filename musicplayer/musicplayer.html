@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- Heres a small plan -->
+<!-- make a little side tab that pops up, and has a set of tracks (free use of course)
+    each corresponding to a mood that one might encounter in a round of DnD. Have the DM
+    have control over which track plays, but give the players the ability to mute sound -->
+
+<!-- WHAT I ACTUALLY DID
+    I embbedded a youtube playlist with a bunch of songs that would fit better than a couple downloaded tracks
+  -->
+
+<html lang="en">
+  <head>
+    <meta chartset="utf-8" />
+    <meta name="viewport" content="width=device-width, inital-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content="testing media player"/>
+    <meta name="autor" content="Juan Cocina"/>
+    <title> MusicPlayer </title> <!-- make sure to change if shipped -->
+    <!-- external links -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
+    <!-- scripts to open up the pop up window -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/musicplayer-popup.js') }}"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/musicplayerstyles.css') }}" />
+  </head>
+
+<!-- pop-up tab information -->
+<div class="side-widget open">
+  <div class="inner">
+    <a class="btn btn-blue productCheckout" id="get-started">Music</a>
+  </div>
+</div>
+<!-- end of pop-up tab -->
+
+
+<!-- pop up window -->
+<div id="popup-container">
+   <div id="popup-window">
+      <div class="modal-content">
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+         <a href="#" class="your-class"></a>
+         <div>
+            <div class="row" style="text-align: center">
+              <h1>Choose a song to fit the mood!</h1>
+            </div>
+            <hr>
+            <br>
+            <!-- youtube embeding -->
+            <iframe width="788" height="600" src="https://www.youtube.com/embed/videoseries?list=PLbHUA-o_5dgJbOXwtdVx--gTnmWfiyyys"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <br>
+         </div>
+      </div>
+   </div>
+ </div>
+ <!-- end of pop up window -->
+
+  </body>
+</html>
