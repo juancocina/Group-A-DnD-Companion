@@ -31,6 +31,7 @@ def createDefaultChar(newUserID, newCharID):
     max_hp = 0
     hit_die_type = 'n/a'
     num_hit_die = charLvl
+    curr_hp = 0
     
     # default stat block to 0's
     strength = 0
@@ -102,11 +103,11 @@ def createDefaultChar(newUserID, newCharID):
                    charLvl, raceID, classID,
                    backgroundID, alignment, profBonus,
                    AC, initiative, speed, max_hp,
-                   hit_die_type, num_hit_die]
+                   hit_die_type, num_hit_die, curr_hp]
 
     # insert into char list table
     sql = '''INSERT INTO user_character_list VALUES 
-    (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)'''
+    (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)'''
     c.execute(sql, newCharList)
     conn.commit()
 
@@ -138,6 +139,23 @@ def createDefaultChar(newUserID, newCharID):
     (?,?,?,?,?,?)'''
     c.execute(sql, profList)
     conn.commit()
+
+    age = 'n/a'
+    height = 'n/a'
+    weight = 'n/a'
+    eyes = 'n/a'
+    skin = 'n/a'
+    hair = 'n/a'
+    gender = 'n/a'
+    faith = 'n/a'
+
+    descriptors = [charID, age, height, weight, eyes, skin, hair, gender, faith]
+
+    # insert descriptors
+    sql = '''INSERT INTO char_descriptors VALUES 
+    (?,?,?,?,?,?,?,?,?)'''
+    c.execute(sql, descriptors)
+    conn.commit()
     
 def getRaceID(raceName):
     # open race db
@@ -154,6 +172,21 @@ def getRaceID(raceName):
     
     return data[0]
 
+def getRace(raceID):
+    # open race db
+    tempConn = sqlite3.connect('DnDEZ_Race.db')
+    tempC = tempConn.cursor()
+    
+    # retrieve the race_id by using race_name
+    tempC.execute('SELECT race_name FROM race WHERE race_id = ?', [raceID])
+    data = tempC.fetchone()
+    
+    # close race db
+    tempC.close()
+    tempConn.close()
+    
+    return data[0]
+
 def getClassID(className):
     # open class db
     tempConn = sqlite3.connect('DnDEZ_Class.db')
@@ -161,6 +194,21 @@ def getClassID(className):
     
     # retrieve the race_id by using race_name
     tempC.execute('SELECT class_id FROM class WHERE class_name = ?', [className])
+    data = tempC.fetchone()
+    
+    # close race db
+    tempC.close()
+    tempConn.close()
+    
+    return data[0]
+
+def getClass(classID):
+    # open class db
+    tempConn = sqlite3.connect('DnDEZ_Class.db')
+    tempC = tempConn.cursor()
+    
+    # retrieve the race_id by using race_name
+    tempC.execute('SELECT class_name FROM class WHERE class_id = ?', [classID])
     data = tempC.fetchone()
     
     # close race db
@@ -324,6 +372,13 @@ def updateInitiative(charID, initiative):
 def updateHP(charID, hp):
     # update hp
     sql = '''UPDATE user_character_list SET max_hp = ? WHERE char_id = ?'''        
+    data = (hp, charID)
+    c.execute(sql, data)
+    conn.commit()
+
+def updateCurrHP(charID, hp):
+    # update hp
+    sql = '''UPDATE user_character_list SET curr_hp = ? WHERE char_id = ?'''        
     data = (hp, charID)
     c.execute(sql, data)
     conn.commit()
@@ -967,7 +1022,13 @@ def updateProfBonusSkills(profArray, charID):
     
         # increment 
         profIndex += 1
-        
+
+def updateDescriptors(charID, age, height, weight, eyes, skin, hair, gender, faith):
+    # insert back into db
+            sql = '''UPDATE char_descriptors SET age = ?, height = ?, weight = ?, eyes = ?, skin = ?, hair = ?, gender = ?, faith = ? WHERE char_id = ?'''        
+            data = (age, height, weight, eyes, skin, hair, gender, faith, charID)
+            c.execute(sql, data)
+            conn.commit()        
         
 def updateProfBonusSavingThrows(charID, classID):
     # get lvl

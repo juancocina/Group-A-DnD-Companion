@@ -11,6 +11,13 @@
 <!-- partial:index.partial.html -->
 <form class="charsheet" id="charsheet">
   <header>
+    <section>
+        <button name="buttonsave" type="button" onclick="save_character()" style="width:100px;margin-bottom:5px;margin-right:30px;">Save Character</button>
+        <button name="buttonrest" type="button" onclick="long_rest()" style="width:100px;margin-bottom:5px;margin-left:30px;">Long Rest</button>
+        <label for="autosave" style="text-transform:Capitalize;font-weight:bold;padding:0px 10px;">Autosave?</label><input name="autosave" id="autosave" type="checkbox" />
+    </section>
+  </header>
+  <header>
     <section class="charname">
       <label for="charname">Character Name</label><input name="charname" id="charname" value={{c_name}} />
     </section>
@@ -201,12 +208,12 @@
       <section class="combat">
         <div class="armorclass">
           <div>
-            <label for="ac">Armor Class</label><input name="ac" placeholder="10" type="text" />
+            <label for="ac">Armor Class</label><input name="ac" value={{c_AC}} type="text" />
           </div>
         </div>
         <div class="initiative">
           <div>
-            <label for="initiative">Initiative</label><input name="initiative" placeholder={{dex_mod}} type="text" />
+            <label for="initiative">Initiative</label><input name="initiative" value={{c_init}} type="text" />
           </div>
         </div>
         <div class="speed">
@@ -218,12 +225,12 @@
         <!-- Copy above format for HP -->
         <div class="armorclass">
           <div>
-            <label for="currenthp">Current Hit Points</label><input name="currenthp" placeholder="10" type="text" />
+            <label for="currenthp">Current Hit Points</label><input name="currenthp" value={{curr_HP}} type="text" />
           </div>
         </div>
         <div class="initiative">
           <div>
-            <label for="maxhp">Hit Point Maximum</label><input name="maxhp" placeholder="10" type="text" />
+            <label for="maxhp">Hit Point Maximum</label><input name="maxhp" value={{max_HP}} type="text" />
           </div>
         </div>
         <div class="speed">
@@ -234,7 +241,7 @@
         <div class="hitdice">
           <div>
             <div class="remaining">
-              <label for="remaininghd">Hit Dice</label><input value={{c_hit_die}} type="text" />
+              <label for="remaininghd">Hit Dice</label><input value={{num_hit_die}}{{c_hit_die}} type="text" />
             </div>
           </div>
         </div>
@@ -268,15 +275,6 @@
       <div class="otherprofs box textblock">
           <label for="otherprofs">Other Proficiencies and Languages</label>
           <textarea name="otherprofs">
-            === Starting Proficiency ===
-            {% for prof in c_start_prof %}
-            {{prof}} 
-            {% endfor %}
-            {{c_profession}}
-            === Chosen Proficiency ===
-            {% for prof in c_proficiency %}
-            {{prof}} 
-            {% endfor %}
             === LANGUAGES ===
             {% for lang in c_lang %}
             {{lang}} 
@@ -607,19 +605,19 @@
           <div class="money">
             <ul>
               <li>
-                <label for="pp">pp</label><input name="pp" />
+                <label for="pp">pp</label><input name="pp" value={{pp}} />
               </li>
               <li>
-                <label for="gp">gp</label><input name="gp" />
+                <label for="gp">gp</label><input name="gp" value={{gp}} />
               </li>
               <li>
-                <label for="ep">ep</label><input name="ep" />
+                <label for="ep">ep</label><input name="ep" value={{ep}} />
               </li>
               <li>
-                <label for="sp">sp</label><input name="sp" />
+                <label for="sp">sp</label><input name="sp" value={{sp}} />
               </li>
               <li>
-                <label for="cp">cp</label><input name="cp" />
+                <label for="cp">cp</label><input name="cp" value={{cp}} />
               </li>
             </ul>
           </div>
