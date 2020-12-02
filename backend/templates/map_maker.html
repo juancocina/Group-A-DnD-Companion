@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>DnD-EZ Map Generator</title>
+    <!-- Main CSS-->
+    <link href="{{ url_for('static', filename='css/map_maker.css') }}" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <section id="ivrof" class="flex-sect">
+    <div id="ip92h" class="container-width">
+        <div id="i2mmz" class="flex-title">Create A Map
+        </div>
+        <div id="iem4z" class="flex-desc">Choose options for a randomly generated map</div>
+<!-- Button to Open the Modal -->
+            <button type="button" style="display: block; margin: 0 auto;" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                Help
+            </button>
+            
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                <div class="modal-content">
+            
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">How To Create A Map</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+            
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                    Modal body..
+                    </div>
+            
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+            
+                </div>
+                </div>
+            </div>
+    </div>
+    </section>
+    <section class="flex-sect" id="ihdbp">
+    <div class="container-width">
+    </div>
+    <div class="row" id="izyb">
+        <div class="cell" id="iw2py">
+        <form method='POST' action="{{ url_for('make_map', id=id) }}" class="form" id="i9pft">
+            <div class="form-group">
+                <label class="label" id="name"><b>Map Name</b></label>
+                <input required class="input" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label class="label" id="description"><b>Map Description</b></label>
+                <input required class="input" id="description" name="description">
+            </div>
+            <div class="form-group">
+                <label class="label" id="ie3pz">Select Environment Type</label>
+                <select required name="environment" class="select" id="i4z7n"><option value="">- Select option -</option><option value="caves">Caves</option><option value="desert">Desert</option><option value="forest">Forest</option><option value="islands">Islands</option></select>
+            </div>
+            <div class="form-group">
+                <label class="label" id="scale">Select Map Size</label>
+                <select required name="shape" class="select" id="select_cale"><option value="">- Select Option -</option><option value="small">Small (400x400)</option><option value="medium">Medium (800x800)</option><option value="large">Large (1200x1200)</option></select>
+            </div>
+            <div class="form-group" id="ia0uq">
+                <label class="label" id="ikbos">Map Zoom: <span id="zoom_value" style="font-weight:bold; color:red">10</span></label>
+                <div class="slidecontainer">
+                    <input type="range" min="50" max="1000" step="50" class="slider" name="scale" id="zoom_range">
+                </div>
+                <!-- <input required class="input" id="zoom" name="scale"> -->
+            </div>
+            <div class="form-group">
+                <label class="label" id="i9mq6"><b>Map Layers: </b><span id="layers_value" style="font-weight:bold; color:red">10</span></label>
+                <div class="slidecontainer">
+                    <input type="range" min="3" max="10" class="slider" name="octaves" id="layers_range">
+                </div>
+                <!-- <input required class="input" id="layers" name="octaves"> -->
+            </div>
+            <button type="submit" class="button" id="iijgx">Generate</button>
+            </div>
+        </form>
+        </div>
+    </div>
+    </section>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Slider Javascript -->
+    <script src="{{ url_for('static', filename='js/map_maker.js') }}"></script>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+ <!-- end document  -->

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="Joshua Nathan" />
+        <title>DnDEZ</title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link  rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+    </head>
+    <body id="page-top">
+        <!-- Masthead-->
+
+        <div class="container">
+            <div class="body">            
+                  <div class="row gutters-sm">
+                    <div class="col-md-8">
+                      <div class="row gutters-sm">
+                        <div class="col-sm-6 mb-3">
+                          <div class="card h-100">
+                            <div class="card-body">
+                              <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Characters</i></h6>
+                              {% for item in characters %}
+                                <div class="card" style="width: 18rem;">
+                                    <img src="{{ url_for('static', filename='icons/portrait/'+item[4].lower())+'.jpg' }}" class="card-img-top">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ item[1] }}</h5>
+                                        <li>Class: {{ item[4] }}</li>
+                                        <li>Race: {{ item[3] }}</li>
+                                        <li>Level: {{ item[2] }}</li>
+                                    </div>
+                                    <a href="{{ url_for('get_character_sheet', char_id=item[0]) }}"><button class="btn btn-primary">Character Sheet</button></a>
+                                    <a href="{{ url_for('delete_character', char_id=item[0]) }}"><button class="btn btn-danger">Delete</button></a>
+                                </div>
+                              {% endfor %}
+                            </div>
+                            
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    </body>
+</html>

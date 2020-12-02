@@ -1,13 +1,3 @@
-CREATE TABLE characters (
-        user_id text, char_id text PRIMARY KEY, char_name text,
-        char_lvl int, race_id text, class_id text,
-        background_id text, alignment text, prof_bonus int,
-        AC int, initiative int, speed int, max_hp int,
-        hit_die_type text, num_hit_die int);
-CREATE TABLE char_descriptors (
-        char_id text, age text, height text,
-        weight text, eyes text, skin text, 
-        hair text);
 CREATE TABLE char_proficiencies (
     char_id text, armor_prof text, weapon_prof text,
     shield_prof text, tool_prof text, languages text);
@@ -36,3 +26,32 @@ CREATE TABLE char_inventory (
     char_id text, item_id text, item_quantity int);
 CREATE TABLE char_currency (
     char_id text, cp int, sp int, ep int, gp int, pp int);
+CREATE TABLE IF NOT EXISTS "char_descriptors" (
+	char_id	int,
+	age	text,
+	height	text,
+	weight	text,
+	eyes	text,
+	skin	text,
+	hair	text,
+	gender	TEXT,
+	faith	TEXT
+);
+CREATE TABLE IF NOT EXISTS "user_character_list" (
+	user_id	int,
+	char_id	INTEGER PRIMARY KEY AUTOINCREMENT,
+	char_name	text,
+	char_lvl	int,
+	race_id	text,
+	class_id	text,
+	background_id	text,
+	alignment	text,
+	prof_bonus	int,
+	AC	int,
+	initiative	int,
+	speed	int,
+	max_hp	int,
+	hit_die_type	text,
+	num_hit_die	int,
+	curr_hp	INTEGER
+);

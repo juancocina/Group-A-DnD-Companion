@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A super simple dice roller for Dungeons and Dragons with every die from the d4 to the d20 to the dX.">
+    <link rel="alternate" type="application/rss+xml" title="RSS feed"
+        href="https://www.paritybit.ca/feeds/sitewide-feed.xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>DnD Simple Dice Roller - paritybit.ca</title>
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/dice.min.css') }}">
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/dice.main.min.css') }}">
+</head>
+<body>
+   
+
+
+    <main>
+    <!--TOC-->
+<!-- END OF HEADER FILE -->
+<h2>Dice Roller</h2>
+<script src="{{ url_for('static', filename='js/dice2.js') }}"></script>
+<div id="grid-container">
+    <h3 id="die-header">Die</h3>
+    <h3 id="num-header">Num</h3>
+    <h3 id="mod-header">Mod</h3>
+    <h3 id="res-header">Result</h3>
+    <button id="d4" onClick="roll(this)" aria-label="Roll d4">d4</button>
+    <input type="number" min=1 value=1 id="num4" aria-label="Number of d4 dice to roll">
+    <input type="number" value=0 id="mod4" aria-label="d4 plus/minus modifier">
+    <p class="field" id="d4result" aria-label="d4 result">0</p>
+    <button id="d6" onClick="roll(this)" aria-label="Roll d6">d6</button>
+    <input type="number" min=1 value=1 id="num6" aria-label="Number of d6 dice to roll">
+    <input type="number" value=0 id="mod6" aria-label="d6 plus/minus modifier">
+    <p class="field" id="d6result" aria-label="d6 result">0</p>
+    <button id="d8" onClick="roll(this)" aria-label="Roll d8">d8</button>
+    <input type="number" min=1 value=1 id="num8" aria-label="Number of d8 dice to roll">
+    <input type="number" value=0 id="mod8" aria-label="d8 plus/minus modifier">
+    <p class="field" id="d8result" aria-label="d8 result">0</p>
+    <button id="d10" onClick="roll(this)" aria-label="Roll d10">d10</button>
+    <input type="number" min=1 value=1 id="num10" aria-label="Number of d10 dice to roll">
+    <input type="number" value=0 id="mod10" aria-label="d10 plus/minus modifier">
+    <p class="field" id="d10result" aria-label="d10 result">0</p>
+    <button id="d12" onClick="roll(this)" aria-label="Roll d12">d12</button>
+    <input type="number" min=1 value=1 id="num12" aria-label="Number of d12 dice to roll">
+    <input type="number" value=0 id="mod12" aria-label="d12 plus/minus modifier">
+    <p class="field" id="d12result" aria-label="d12 result">0</p>
+    <button id="d20" onClick="roll(this)" aria-label="Roll d20">d20</button>
+    <input type="number" min=1 value=1 id="num20" aria-label="Number of d20 dice to roll">
+    <input type="number" value=0 id="mod20" aria-label="d20 plus/minus modifier">
+    <p class="field" id="d20result" aria-label="d20 result">0</p>
+    <button id="d100" onClick="roll(this)" aria-label="Roll d100">d100</button>
+    <input type="number" min=1 value=1 id="num100" aria-label="Number of d100 dice to roll">
+    <input type="number" value=0 id="mod100" aria-label="d100 plus/minus modifier">
+    <p class="field" id="d100result" aria-label="d100 result">0</p>
+    <div id="history">
+        <textarea id="history-text" rows=16 cols=34 aria-label="Roll history">-------&#13;&#10;History</textarea>
+        <button id="clear-history" onClick="clear_history()">Clear History</button>
+    </div>
+</div>
+<div id="stringRoll" onload=registerShortcut()>
+    or type here (modifier optional): <input type="text" id="inputString" placeholder="1d20+0" aria-label="Custom dice value in the form <number_of_dice>d<dice_value>+/-<modifier>">
+    <button id="textRollSubmit" onClick="stringRoll()">Roll</button>
+</div>
+<script>
+    let rollInput = document.getElementById("inputString");
+    rollInput.addEventListener("keyup", (event) => {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("textRollSubmit").click();
+        }
+    });
+</script>
+<!-- BEGINNING OF FOOTER -->
+</main>
+
+</body>
+</html>

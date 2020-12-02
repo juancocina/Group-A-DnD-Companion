@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Dice Roller</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dice.css') }}"/>
+</head>
+
+<body>
+
+  <form>
+    <input type="number" id="number" name="number">
+    <label id="label">d</label>
+    <input type="number" id="sides" name="sides">
+    <p id="placeholder"></p>
+    <button id="button" onclick="roll()">Roll Dice</button>
+  </form>
+
+  <script src="{{ url_for('static', filename='js/dice.js') }}"></script>
+</body>
+</html>

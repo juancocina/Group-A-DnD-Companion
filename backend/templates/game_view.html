@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="Joshua Nathan" />
+        <title>DnDEZ</title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link  rel="stylesheet" href="{{ url_for('static', filename='css/game_view.css') }}" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    </head>
+<body id="page-top">
+ 
+  <!-- NAV -->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">DnDEZ</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/faq">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/howtoplay">How To Play</a>
+        </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Account
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/account">Profile</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item logout" href="/logout">Logout</a>
+            </div>
+          </li>
+      </ul>
+    </div>
+  </nav>
+<!-- END NAV -->
+</div>
+
+<!-- The button used to copy the text -->
+<div>
+  <button style="display: block; margin: 0 auto;" onclick="myFunction()">Copy Link</button>
+</div>
+
+
+<script>
+
+  function myFunction() {
+    var text = document.createElement('input');
+    document.body.appendChild(text);
+    var id = '{{ id|string }}';
+    var copy = "http://192.168.0.24:5000/game/".concat(id);
+    console.log(id);
+    console.log(copy.value)
+    console.log(copy)
+    text.value = copy;
+    text.select();
+    document.execCommand("copy");
+
+    alert("Copied the address: " + copy);
+    document.body.removeChild(text);
+}
+
+</script>
+
+<section id="map-section" class="gpd-section">
+<div id="map-container" class="gpd-container">
+  <div id="ig7rh">
+    <!-- START CAROUSEL -->
+    <div id="pageCarousel" class="carousel slide" data-interval="false">
+      <div class="carousel-inner">
+        {% for map in m_data %}
+          <div class="carousel-item {% if loop.index == 1 %} active {% endif %}" id="slide{{ loop.index }}">
+            <img style="display: block; margin: 0 auto;" src="{{ url_for('static', filename='campaigns/'+id|string+'/'+map[3]) }}">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 style="background-color:white; color:black">{{ map[1] }}</h5>
+              <h6 style="background-color:white; color:black">{{ map[2] }}</h6>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <a class="carousel-control-prev" href="#pageCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#pageCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="false"></span>
+        <span class="sr-only">Next</span>
+      </a>
+      <p style="margin-top: 10px; text-align: center; font-size: 20px; font-weight: bold">Scale: <input type="text"></p>
+    </div>
+    <!-- END CAROUSEL -->
+  </div>
+</div>
+</section>
+<div id="divider">
+</div>
+<section id="tab-section" class="gpd-section">
+<div id="tab-sec-con" class="gpd-container">
+  <div data-tabs="1" id="tabs">
+    <nav data-tab-container="1" id="ikikh" class="tab-container">
+      <a href="#tab1" data-tab="1" id="izvnd" class="tab">Campaign Info</a>
+      <a href="#tab2" data-tab="1" id="imhbn" class="tab">Character Sheet Tab</a>
+      <a href="#tab4" data-tab="1" id="ii19h" class="tab">Dice Roller</a>
+    </nav>
+    <div id="tab-div">
+    </div>
+    <div id="tab1" data-tab-content="1" class="tab-content">
+      <div id="ij6wg">
+        <h1>Welcome to {{ c_data[0][1] }}</h1>
+        <h4>Description: {{ c_data[0][2] }}</h4>
+      </div>
+    </div>
+    <div id="tab2" data-tab-content="1" class="tab-content">
+      <div id="i9ks2"><iframe src="/account/characters" height="1200" width="1900" title="characters iframe"></iframe>
+      </div>
+    </div>
+    <div data-tab-content="1" id="tab4" class="tab-content">
+      <div id="i3rii">
+        <div style="width: 25%; margin: 0 auto;">
+          <!-- BEGIN DICE ROLLER -->
+          <h2>Dice Roller</h2>
+          <script src="{{ url_for('static', filename='js/dice2.js') }}"></script>
+            <div id="grid-container">
+                <h3 id="die-header">Die</h3>
+                <h3 id="num-header">Num</h3>
+                <h3 id="mod-header">Mod</h3>
+                <h3 id="res-header">Result</h3>
+                <button id="d4" onClick="roll(this)" aria-label="Roll d4">d4</button>
+                <input type="number" min=1 value=1 id="num4" aria-label="Number of d4 dice to roll">
+                <input type="number" value=0 id="mod4" aria-label="d4 plus/minus modifier">
+                <p class="field" id="d4result" aria-label="d4 result">0</p>
+                <button id="d6" onClick="roll(this)" aria-label="Roll d6">d6</button>
+                <input type="number" min=1 value=1 id="num6" aria-label="Number of d6 dice to roll">
+                <input type="number" value=0 id="mod6" aria-label="d6 plus/minus modifier">
+                <p class="field" id="d6result" aria-label="d6 result">0</p>
+                <button id="d8" onClick="roll(this)" aria-label="Roll d8">d8</button>
+                <input type="number" min=1 value=1 id="num8" aria-label="Number of d8 dice to roll">
+                <input type="number" value=0 id="mod8" aria-label="d8 plus/minus modifier">
+                <p class="field" id="d8result" aria-label="d8 result">0</p>
+                <button id="d10" onClick="roll(this)" aria-label="Roll d10">d10</button>
+                <input type="number" min=1 value=1 id="num10" aria-label="Number of d10 dice to roll">
+                <input type="number" value=0 id="mod10" aria-label="d10 plus/minus modifier">
+                <p class="field" id="d10result" aria-label="d10 result">0</p>
+                <button id="d12" onClick="roll(this)" aria-label="Roll d12">d12</button>
+                <input type="number" min=1 value=1 id="num12" aria-label="Number of d12 dice to roll">
+                <input type="number" value=0 id="mod12" aria-label="d12 plus/minus modifier">
+                <p class="field" id="d12result" aria-label="d12 result">0</p>
+                <button id="d20" onClick="roll(this)" aria-label="Roll d20">d20</button>
+                <input type="number" min=1 value=1 id="num20" aria-label="Number of d20 dice to roll">
+                <input type="number" value=0 id="mod20" aria-label="d20 plus/minus modifier">
+                <p class="field" id="d20result" aria-label="d20 result">0</p>
+                <button id="d100" onClick="roll(this)" aria-label="Roll d100">d100</button>
+                <input type="number" min=1 value=1 id="num100" aria-label="Number of d100 dice to roll">
+                <input type="number" value=0 id="mod100" aria-label="d100 plus/minus modifier">
+                <p class="field" id="d100result" aria-label="d100 result">0</p>
+                <div id="history">
+                    <textarea id="history-text" rows=16 cols=34 aria-label="Roll history">-------&#13;&#10;History</textarea>
+                    <button id="clear-history" onClick="clear_history()">Clear History</button>
+                </div>
+            </div>
+            <div id="stringRoll" onload=registerShortcut()>
+                or type here (modifier optional): <input type="text" id="inputString" placeholder="1d20+0" aria-label="Custom dice value in the form <number_of_dice>d<dice_value>+/-<modifier>">
+                <button id="textRollSubmit" onClick="stringRoll()">Roll</button>
+            </div>
+            <script>
+                let rollInput = document.getElementById("inputString");
+                rollInput.addEventListener("keyup", (event) => {
+                    if (event.keyCode === 13) {
+                        event.preventDefault();
+                        document.getElementById("textRollSubmit").click();
+                    }
+                });
+            </script>
+          </div>
+          <!-- END DICE ROLLER -->
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+    <script>var items = document.querySelectorAll('#i6rqo');
+    for (var i = 0, len = items.length; i < len; i++) {
+      (function(){
+        var t,e=0,n='gjs-collapse',r='max-height',i='ease-in-out',o=.25,a=function(){
+          var t,e=document.createElement('void'),n={
+            transition:'transitionend',OTransition:'oTransitionEnd',MozTransition:'transitionend',WebkitTransition:'webkitTransitionEnd'};
+          for(t in n)if(void 0!==e.style[t])return n[t]}
+        (),s=function(t){
+          e=1;
+          var n=function(t){
+            var e=window.getComputedStyle(t),n=e.display,i=parseInt(e[r]);
+            if('none'!==n&&'0'!==i)return t.offsetHeight;
+            t.style.height='auto',t.style.display='block',t.style.position='absolute',t.style.visibility='hidden';
+            var o=t.offsetHeight;
+            return t.style.height='',t.style.display='',t.style.position='',t.style.visibility='',o}
+          (t),a=t.style;
+          a.display='block',a.transition=r+' '+o+'s '+i,a.overflowY='hidden',''==a[r]&&(a[r]=0),0==parseInt(a[r])?(a[r]='0',setTimeout(function(){
+            a[r]=n+'px'}
+                                                                                                                                      ,10)):a[r]='0'};
+        n in this||this.addEventListener('click',function(n){
+          if(n.preventDefault(),!e){
+            var i=this.closest('.gpd-navbar').querySelector(".gpd-navbar__items");
+            s(i),t||(i.addEventListener(a,function(){
+              e=0;
+              var t=i.style;
+              0==parseInt(t[r])&&(t.display='',t[r]='')}
+                                      ),t=1)}
+        }
+                                        ),this[n]=1}
+      .bind(items[i]))();
+    }
+    var items = document.querySelectorAll('#tabs');
+    for (var i = 0, len = items.length; i < len; i++) {
+      (function(){
+        var t,e=this,n="[data-tab]",r=document.body,i=r.matchesSelector||r.webkitMatchesSelector||r.mozMatchesSelector||r.msMatchesSelector,o=function(r){
+          var i=e.querySelectorAll(n)||[];
+          for(t=0;t<i.length;t++){
+            var o=i[t],a=o.className.replace("tab-active","").trim();
+            o.className=a}
+          !function(){
+            var n=e.querySelectorAll("[data-tab-content]")||[];
+            for(t=0;t<n.length;t++)n[t].style.display="none"}
+          (),r.className+=" tab-active";
+          var s=r.getAttribute("href"),c=e.querySelector(s);
+          c&&(c.style.display="")}
+        ,a=e.querySelector(".tab-active"+n);
+        (a=a||e.querySelector(n))&&o(a),e.addEventListener("click",function(t){
+          var e=t.target;
+          i.call(e,n)&&o(e)}
+                                                          )}
+      .bind(items[i]))();
+    }
+    </script>
+  </body>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>

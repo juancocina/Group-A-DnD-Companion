@@ -27,10 +27,23 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="/howtoplay">How To</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="/faq">FAQ</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="/howtoplay">How-To-Play</a><li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="#signup">Contact</a></li>
+                        {% if LoggedIn %}
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Account
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="/account">Profile</a>
+                                    <a class="dropdown-item" href="">Option</a>
+                                    <a class="dropdown-item" href="/logout">Logout</a>
+                                </div>
+                            </li>
+                        {% else %}
+                            <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="/login">Login</a></li>
+                            <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="/register">Sign Up</a></li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>

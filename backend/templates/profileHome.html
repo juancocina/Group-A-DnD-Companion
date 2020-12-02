@@ -21,7 +21,7 @@
 	</div>
 	{% else %}
 	<div class="dropdown">
-		<button class="dropbtn">Hello, <br>{{firstName}}</button>
+		<button class="dropbtn">Hello, <br>{{username}}</button>
 		<div class="dropdown-content">
 			<a href="/account/orders">Your orders</a>
 			<a href="/account/profile">Your profile</a>
@@ -33,7 +33,7 @@
 	<div id="kart">
 		<a class="link" href="/cart">
 			<img src={{url_for('static', filename='images/shoppingCart.png')}} id="cartIcon" />
-			CART {{noOfItems}}
+			<!-- CART {{noOfItems}} -->
 		</a>
 	</div>
 </div>

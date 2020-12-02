@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="Joshua Nathan" />
+        <title>DnDEZ</title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link  rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-inverse fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger text-white-50" href="#page-top">DnDEZ</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="true" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="/howtoplay">How To</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="/faq">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+
+        <div class="container">
+            <div class="body">            
+                  <div class="row gutters-sm">
+                    <div class="col-md-4 mb-3">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="d-flex flex-column align-items-center text-center">
+                            <img src="data:image/png;base64,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" alt="Admin" class="rounded-circle" width="150">
+                            <div class="mt-3">
+                              <h4>{{username}}</h4>
+                              <button class="btn btn-primary">Edit</button>
+                              <a href="/logout"><button class="btn btn-outline-primary">Logout</button></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card mb-3">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <h6 class="mb-0">User Name</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                              {{username}}
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <h6 class="mb-0">Email</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                              {{email}}
+                            </div>
+                          </div>
+                          <hr>
+
+        
+
+
+                        </div>
+                      </div>
+                      <div class="row gutters-sm">
+                        <div class="col-sm-6 mb-3">
+                          <div class="card h-100">
+                            <div class="card-body">
+                              <a href="/account/characters/create"><button class="btn btn-primary">Create Character</button></a>
+                              <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Characters</i></h6>
+                              {% for item in characters %}
+                                <div class="card" style="width: 18rem;">
+                                    <img src="{{ url_for('static', filename='icons/portrait/'+item[4].lower())+'.jpg' }}" class="card-img-top">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ item[1] }}</h5>
+                                        <li>Class: {{ item[4] }}</li>
+                                        <li>Race: {{ item[3] }}</li>
+                                        <li>Level: {{ item[2] }}</li>
+                                    </div>
+                                    <a href="{{ url_for('get_character_sheet', char_id=item[0]) }}"><button class="btn btn-primary">Character Sheet</button></a>
+                                    <a href="{{ url_for('delete_character', char_id=item[0]) }}"><button class="btn btn-danger">Delete</button></a>
+                                </div>
+                              {% endfor %}
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                          <div class="card h-100">
+                            <div class="card-body">
+                              <a href="/account/campaigns/create"><button class="btn btn-primary">Create Campaign</button></a>
+                              <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Campaigns</i></h6>
+                              {% for item in campaigns %}
+                                <div class="card mb-3" style="max-width: 540px;">
+                                            <img src="{{ url_for('static', filename='campaigns/'+item[3]|string+'/'+item[4]) }}" class="card-img-top">
+                                            <div class="card-body">
+                                                <h5 class="card-title">{{ item[0] }}</h5>
+                                                <li>Description: {{ item[1] }}</li>
+                                                <li>Date Created: {{ item[2] }}</li>
+                                            </div>
+                                    <div class="btn-group">
+                                      <a href="{{ url_for('game_view', id=item[3]) }}"><button class="btn btn-primary">Start Game</button></a>
+                                      <a href="{{ url_for('view_campaign', id=item[3]) }}"><button class="btn btn-primary">View</button></a>
+                                      <a href="{{ url_for('delete_campaign', id=item[3]) }}"><button class="btn btn-danger">Delete</button></a>
+                                    </div>
+                                </div>
+                              {% endfor %}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50">
+            <div class="container text-center text-md-left">
+                <div class="row">
+                    <hr class="clearfix w-100 d-md-none">
+                    <div class="col-md-2 mx-auto">
+                        <h4 class="font-weight-bold text-uppercase mt-3 mb-4">DnDEZ</h4>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#about">About</a>
+                            </li>
+                            <li>
+                                <a href="">Blog</a>
+                            </li>
+                            <li>
+                                <a href="">Github</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr class="clearfix w-100 d-md-none">
+                    <div class="col-md-2 mx-auto">
+                        <h4 class="font-weight-bold text-uppercase mt-3 mb-4">Support</h4>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="/faq">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="/howtoplay">Getting Started</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+                <div class="row-fluid" style="padding-left: 10%">
+                    <div class="col-md-4 text-left">
+                        <h6 class="font-weight-bold text-uppercase mt-3 mb-4">©2020 DnDEZ</h6>
+                        <a href="" style="padding-right: 20px">Privacy</a>
+                        <a href="" style="padding-left: 20px">Terms</a>
+                    </div>
+                </div>
+
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    </body>
+</html>

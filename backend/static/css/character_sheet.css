@@ -1,0 +1,1305 @@
+.red {
+    background: red;
+  }
+  
+  .blue {
+    background: blue;
+  }
+  
+  .hide {
+    display: none !important;
+  }
+  
+  hr.pageborder {
+    border-top: 5px solid black;
+  }
+  
+  button {
+    text-align: center;
+    border: 1px solid black;
+    font-size: 10px;
+    border-radius: 10px 10px 10px 10px;
+    padding: 4px 6px;
+    font-weight: bold;
+  }
+  
+  #buttonload {
+    text-align: center;
+    border: 1px solid black;
+    font-size: 10px;
+    border-radius: 10px 10px 10px 10px;
+    padding: 4px 6px;
+    font-weight: bold;
+  }
+  
+  textarea {
+    font-size: 12px;
+    text-align: left;
+    width: calc(100% - 20px - 2px);
+    border-radius: 10px;
+    padding: 10px;
+    resize: none;
+    overflow: hidden;
+    height: 15em;
+  }
+  
+  input[type="checkbox"] {
+    cursor: pointer;
+  }
+  
+  div.box {
+    margin-top: 10px;
+  }
+  
+  form.charsheet {
+    width: 800px;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+  }
+  form.charsheet div.textblock {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+            flex-direction: column-reverse;
+    width: 100%;
+    -webkit-box-align: center;
+            align-items: center;
+  }
+  form.charsheet div.textblock label {
+    text-align: center;
+    border: 1px solid black;
+    border-top: 0;
+    font-size: 10px;
+    width: calc(100% - 20px - 2px);
+    border-radius: 0 0 10px 10px;
+    padding: 4px 0;
+    font-weight: bold;
+  }
+  form.charsheet div.textblock textarea {
+    border: 1px solid black;
+  }
+  form.charsheet ul {
+    margin: 0;
+    padding: 0;
+  }
+  form.charsheet ul li {
+    list-style-image: none;
+    display: block;
+  }
+  form.charsheet ::-webkit-input-placeholder {
+    color: #bbb;
+  }
+  form.charsheet ::-moz-placeholder {
+    color: #bbb;
+  }
+  form.charsheet :-ms-input-placeholder {
+    color: #bbb;
+  }
+  form.charsheet ::-ms-input-placeholder {
+    color: #bbb;
+  }
+  form.charsheet ::placeholder {
+    color: #bbb;
+  }
+  form.charsheet label {
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  form.charsheet header {
+    display: -webkit-box;
+    display: flex;
+    align-content: stretch;
+    -webkit-box-align: stretch;
+            align-items: stretch;
+  }
+  form.charsheet header section.charname {
+    border: 1px solid black;
+    border-right: 0;
+    border-radius: 10px 0 0 10px;
+    padding: 5px 0;
+    background-color: #ddd;
+    width: 30%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+            flex-direction: column-reverse;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+  }
+  form.charsheet header section.charname input {
+    padding: 0.5em;
+    margin: 5px;
+    border: 0;
+  }
+  form.charsheet header section.charname label {
+    padding-left: 1em;
+  }
+  form.charsheet header section.misc {
+    width: 70%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  #misc-desc {
+    width: 100%;
+  }
+  form.charsheet header section.misc ul {
+    padding: 10px 0px 5px 0px;
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  form.charsheet header section.misc ul li {
+    width: 33.33333%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+            flex-direction: column-reverse;
+  }
+  #misc-desc ul li {
+    width: 25%;
+  }
+  form.charsheet header section.misc ul li label {
+    margin-bottom: 5px;
+  }
+  form.charsheet header section.misc ul li input {
+    border: 0;
+    border-bottom: 1px solid #ddd;
+  }
+  form.charsheet main {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    margin-top: 20px;
+  }
+  form.charsheet main div.label-container {
+    position: relative;
+    width: 100%;
+    height: 18px;
+    margin-top: 6px;
+    border: 1px solid black;
+    border-left: 0;
+    text-align: center;
+  }
+  form.charsheet main div.label-container > label {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    -webkit-transform: translate(0%, 50%);
+            transform: translate(0%, 50%);
+    width: 100%;
+    font-size: 8px;
+  }
+  form.charsheet main > section {
+    width: 32%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+  }
+  form.charsheet main > section section.attributes {
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+  }
+  form.charsheet main > section section.attributes div.scores {
+    width: 101px;
+    background-color: #ddd;
+    border-radius: 10px;
+    padding-bottom: 5px;
+  }
+  form.charsheet main > section section.attributes div.scores label {
+    font-size: 8px;
+    font-weight: bold;
+  }
+  form.charsheet main > section section.attributes div.scores ul {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    justify-content: space-around;
+    -webkit-box-align: center;
+            align-items: center;
+    height: 100%;
+  }
+  form.charsheet main > section section.attributes div.scores ul li {
+    height: 80px;
+    width: 70px;
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    border-radius: 10px;
+  }
+  form.charsheet main > section section.attributes div.scores ul li input {
+    width: 100%;
+    padding: 0;
+    border: 0;
+  }
+  form.charsheet main > section section.attributes div.scores ul li div.score input {
+    text-align: center;
+    font-size: 40px;
+    padding: 2px 0px 0px 0px;
+    background: white;
+  }
+  form.charsheet main > section section.attributes div.scores ul li div.modifier {
+    margin-top: 3px;
+  }
+  form.charsheet main > section section.attributes div.scores ul li div.modifier input {
+    background: white;
+    width: 30px;
+    height: 20px;
+    border: 1px inset black;
+    border-radius: 20px;
+    margin: -1px;
+    text-align: center;
+  }
+  form.charsheet main > section section.attributes div.attr-applications div.inspiration {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: end;
+            justify-content: flex-end;
+  }
+  form.charsheet main > section section.attributes div.attr-applications div.inspiration input {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  form.charsheet main > section section.attributes div.attr-applications div.proficiencybonus {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: end;
+            justify-content: flex-end;
+  }
+  form.charsheet main > section section.attributes div.attr-applications div.proficiencybonus input {
+    width: 30px;
+    height: 28px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 10px;
+  }
+  form.charsheet main > section section.attributes div.attr-applications div.list-section {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 5px;
+  }
+  form.charsheet main > section section.attributes div.attr-applications div.list-section div.label {
+    margin-top: 10px;
+    margin-bottom: 2.5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+  }
+  form.charsheet main > section section.attributes div.attr-applications div.list-section ul li {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+  }
+  form.charsheet main > section section.attributes div.attr-applications div.list-section ul li > * {
+    margin-left: 5px;
+  }
+  form.charsheet main > section section.attributes div.attr-applications div.list-section ul li label {
+    text-transform: none;
+    font-size: 8px;
+    text-align: left;
+    -webkit-box-ordinal-group: 4;
+            order: 3;
+  }
+  form.charsheet main > section section.attributes div.attr-applications div.list-section ul li label span.skill {
+    color: #bbb;
+  }
+  form.charsheet main > section section.attributes div.attr-applications div.list-section ul li input[type="text"] {
+    width: 30px;
+    font-size: 12px;
+    text-align: center;
+    border: 0;
+    border-bottom: 1px solid black;
+    -webkit-box-ordinal-group: 3;
+            order: 2;
+  }
+  form.charsheet main > section section.attributes div.attr-applications div.list-section ul li input[type="checkbox"] {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    -webkit-box-ordinal-group: 2;
+            order: 1;
+  }
+  form.charsheet main > section section.attributes div.attr-applications div.list-section ul li input[type="checkbox"]:checked {
+    background-color: black;
+  }
+  form.charsheet main > section div.passive-perception {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: end;
+            justify-content: flex-end;
+  }
+  form.charsheet main > section div.passive-perception input {
+    width: 30px;
+    height: 28px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  
+  form.charsheet main > section div.otherprofs textarea {
+    height: 17em;
+  }
+  form.charsheet main section.combat {
+    background-color: #ddd;
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+  }
+  form.charsheet main section.combat > div {
+    overflow: hidden;
+  }
+  form.charsheet main section.combat > div.armorclass, form.charsheet main section.combat > div.initiative, form.charsheet main section.combat > div.speed {
+    flex-basis: 33.333%;
+  }
+  form.charsheet main section.combat > div.armorclass > div, form.charsheet main section.combat > div.initiative > div, form.charsheet main section.combat > div.speed > div {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+            align-items: center;
+    margin-top: 10px;
+  }
+  form.charsheet main section.combat > div.armorclass > div label, form.charsheet main section.combat > div.initiative > div label, form.charsheet main section.combat > div.speed > div label {
+    font-size: 8px;
+    width: 50px;
+    border: 1px solid black;
+    border-top: 0;
+    background-color: white;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 0 0 10px 10px;
+  }
+  form.charsheet main section.combat > div.armorclass > div input, form.charsheet main section.combat > div.initiative > div input, form.charsheet main section.combat > div.speed > div input {
+    height: 70px;
+    width: 70px;
+    border-radius: 10px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 30px;
+  }
+  form.charsheet main section.combat > div.hp {
+    flex-basis: 100%;
+  }
+  form.charsheet main section.combat > div.hp > div.regular {
+    background-color: white;
+    border: 1px solid black;
+    margin: 10px;
+    margin-bottom: 5px;
+    border-radius: 10px 10px 0 0;
+  }
+  form.charsheet main section.combat > div.hp > div.regular > div.max {
+    display: -webkit-box;
+    display: flex;
+    justify-content: space-around;
+    -webkit-box-align: baseline;
+            align-items: baseline;
+  }
+  form.charsheet main section.combat > div.hp > div.regular > div.max label {
+    font-size: 10px;
+    text-transform: none;
+    color: #bbb;
+  }
+  form.charsheet main section.combat > div.hp > div.regular > div.max input {
+    width: 40%;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+    text-align: center;
+  }
+  form.charsheet main section.combat > div.hp > div.regular > div.current {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+            flex-direction: column-reverse;
+  }
+  form.charsheet main section.combat > div.hp > div.regular > div.current input {
+    border: 0;
+    width: 100%;
+    padding: 1em 0;
+    font-size: 20px;
+    text-align: center;
+  }
+  form.charsheet main section.combat > div.hp > div.regular > div.current label {
+    font-size: 10px;
+    padding-bottom: 5px;
+    text-align: center;
+    font-weight: bold;
+  }
+  form.charsheet main section.combat > div.hp > div.temporary {
+    margin: 10px;
+    margin-top: 0;
+    border: 1px solid black;
+    border-radius: 0 0 10px 10px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+            flex-direction: column-reverse;
+    background-color: white;
+  }
+  form.charsheet main section.combat > div.hp > div.temporary input {
+    padding: 1em 0;
+    font-size: 20px;
+    border: 0;
+    text-align: center;
+  }
+  form.charsheet main section.combat > div.hp > div.temporary label {
+    font-size: 10px;
+    padding-bottom: 5px;
+    text-align: center;
+    font-weight: bold;
+  }
+  form.charsheet main section.combat > div.hitdice, form.charsheet main section.combat > div.deathsaves {
+    -webkit-box-flex: 1;
+            flex: 1 50%;
+    height: 100px;
+  }
+  form.charsheet main section.combat > div.hitdice > div, form.charsheet main section.combat > div.deathsaves > div {
+    height: 80px;
+  }
+  form.charsheet main section.combat > div.hitdice > div {
+    background-color: white;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+  }
+  form.charsheet main section.combat > div.hitdice > div > div.total {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: baseline;
+            align-items: baseline;
+    justify-content: space-around;
+    padding: 5px 0;
+  }
+  form.charsheet main section.combat > div.hitdice > div > div.total label {
+    font-size: 10px;
+    color: #bbb;
+    margin: 0.25em;
+    text-transform: none;
+  }
+  form.charsheet main section.combat > div.hitdice > div > div.total input {
+    font-size: 12px;
+    -webkit-box-flex: 1;
+            flex-grow: 1;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    width: 50%;
+    margin-right: 0.25em;
+    padding: 0 0.25em;
+    text-align: center;
+  }
+  form.charsheet main section.combat > div.hitdice > div > div.remaining {
+    -webkit-box-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+            flex-direction: column-reverse;
+  }
+  form.charsheet main section.combat > div.hitdice > div > div.remaining label {
+    text-align: center;
+    padding: 2px;
+    font-size: 10px;
+  }
+  form.charsheet main section.combat > div.hitdice > div > div.remaining input {
+    text-align: center;
+    border: 0;
+    -webkit-box-flex: 1;
+            flex: 1;
+  }
+  form.charsheet main section.combat > div.deathsaves > div {
+    margin: 10px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+            flex-direction: column-reverse;
+  }
+  form.charsheet main section.combat > div.deathsaves > div > div.label {
+    text-align: center;
+  }
+  form.charsheet main section.combat > div.deathsaves > div > div.label label {
+    font-size: 10px;
+  }
+  form.charsheet main section.combat > div.deathsaves > div > div.marks {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-flex: 1;
+            flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: center;
+            justify-content: center;
+  }
+  form.charsheet main section.combat > div.deathsaves > div > div.marks div.deathsuccesses, form.charsheet main section.combat > div.deathsaves > div > div.marks div.deathfails {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+  }
+  form.charsheet main section.combat > div.deathsaves > div > div.marks div.deathsuccesses label, form.charsheet main section.combat > div.deathsaves > div > div.marks div.deathfails label {
+    font-size: 8px;
+    text-align: right;
+    -webkit-box-flex: 1;
+            flex: 1 50%;
+  }
+  form.charsheet main section.combat > div.deathsaves > div div.bubbles {
+    -webkit-box-flex: 1;
+            flex: 1 40%;
+    margin-left: 5px;
+  }
+  form.charsheet main section.combat > div.deathsaves > div div.bubbles input[type="checkbox"] {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  form.charsheet main section.combat > div.deathsaves > div div.bubbles input[type="checkbox"]:checked {
+    background-color: black;
+  }
+  
+  /* Attacks and Spellcasting */
+  form.charsheet header section.attacksandspellcasting {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 100%;
+  }
+  form.charsheet header section.attacksandspellcasting > div {
+    margin: 10px;
+    font-weight: bold;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+  }
+  form.charsheet header section.attacksandspellcasting > div > label {
+    -webkit-box-ordinal-group: 4;
+            order: 3;
+    text-align: center;
+  }
+  form.charsheet header section.attacksandspellcasting > div > table {
+    width: 100%;
+  }
+  form.charsheet header section.attacksandspellcasting > div > table th {
+    font-size: 10px;
+    color: black;
+  }
+  form.charsheet header section.attacksandspellcasting > div > table td {
+    font-size: 10px;
+    color: black;
+  }
+  form.charsheet header section.attacksandspellcasting > div > table input {
+    width: calc(100% - 4px);
+    border: 0;
+    background-color: #ddd;
+    font-size: 10px;
+    padding: 3px;
+  }
+  form.charsheet header section.attacksandspellcasting > div textarea {
+    border: 0;
+    height: 10em;
+  }
+  
+  
+  form.charsheet header section.currency {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  form.charsheet header section.currency > div {
+    padding: 10px;
+    font-weight: bold;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  form.charsheet header section.currency > div > div.money ul {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;/*
+    -webkit-box-pack: justify;
+            justify-content: space-between;*/
+    height: 100%;
+  }
+  form.charsheet header section.currency > div > div.money ul > li {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    padding: 3px 0;
+  }
+  form.charsheet header section.currency > div > div.money ul > li label {
+    border: 1px solid black;
+    border-radius: 10px 0 0 10px;
+    border-right: 0;
+    width: 20px;
+    font-size: 8px;
+    text-align: center;
+    padding: 3px 0;
+  }
+  form.charsheet header section.currency > div > div.money ul > li input {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 40px;
+    padding: 10px 3px;
+    font-size: 12px;
+    text-align: center;
+  }
+  form.charsheet header section.currency > div > label {
+    -webkit-box-ordinal-group: 4;
+            order: 3;
+    text-align: center;
+    -webkit-box-flex: 100%;
+            flex: 100%;
+  }
+  form.charsheet header section.currency > div > textarea {
+    -webkit-box-flex: 1;
+            flex: 1;
+    border: 0;
+    height: 23em;
+  }
+  
+  form.charsheet main section.flavor {
+    padding: 10px;
+    background: #ddd;
+    border-radius: 10px;
+  }
+  form.charsheet main section.flavor div {
+    background: white;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+            flex-direction: column-reverse;
+    padding: 5px;
+    border: 1px solid black;
+  }
+  form.charsheet main section.flavor div label {
+    text-align: center;
+    font-size: 10px;
+    margin-top: 3px;
+  }
+  form.charsheet main section.flavor div textarea {
+    border: 0;
+    border-radius: 0;
+    height: 4em;
+  }
+  form.charsheet main section.flavor div:first-child {
+    border-radius: 10px 10px 0 0;
+  }
+  form.charsheet main section.flavor div:not(:first-child) {
+    margin-top: 10px;
+  }
+  form.charsheet main section.flavor div:last-child {
+    border-radius: 0 0 10px 10px;
+  }
+  
+  
+  form.charsheet main section.features {
+    padding: 0px;
+  }
+  form.charsheet main section.features div {
+    padding: 10px;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+            flex-direction: column-reverse;
+  }
+  form.charsheet main section.features div label {
+    text-align: center;
+  }
+  form.charsheet main section.features div textarea {
+    border: 0;
+    padding: 5px;
+    height: 47em;
+  }
+  
+  /* Attacks and Spellcasting */
+  form.charsheet header section.encumberance {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 100%;
+  }
+  form.charsheet header section.encumberance > div {
+    margin: 10px;
+    font-weight: bold;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+  }
+  form.charsheet header section.encumberance > div > label {
+    -webkit-box-ordinal-group: 4;
+            order: 3;
+    text-align: center;
+  }
+  form.charsheet header section.encumberance > div > div > table {
+    width: 100%;
+    height: 100%;
+  }
+  form.charsheet header section.encumberance > div > div > table th {
+    font-size: 10px;
+    color: black;
+  }
+  form.charsheet header section.encumberance > div > div > table td {
+    font-size: 10px;
+    color: black;
+  }
+  form.charsheet header section.encumberance > div > div > table input {
+    width: calc(100% - 4px);
+    border: 0;
+    background-color: #ddd;
+    font-size: 10px;
+    padding: 3px;
+  }
+  form.charsheet header section.encumberance > div textarea {
+    border: 0;
+    height: 10em;
+  }
+  
+  textarea {
+    /* Hides scroll bar until needed. */
+    overflow-y: auto;
+  }
+  
+  #loadlabel {
+    padding: 5px;
+    font-weight: bold;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .custom-control-label::before,
+  .custom-file-label,
+  .custom-select {
+      transition: none;
+    }
+  }
+  
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+  
+  .nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+  }
+  .nav-link:hover, .nav-link:focus {
+    text-decoration: none;
+  }
+  .nav-link.disabled {
+    color: #6c757d;
+    pointer-events: none;
+    cursor: default;
+  }
+  
+  .nav-tabs {
+    border-bottom: 1px solid #dee2e6;
+  }
+  .nav-tabs .nav-item {
+    margin-bottom: -1px;
+  }
+  .nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+  .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+    border-color: #e9ecef #e9ecef #dee2e6;
+  }
+  .nav-tabs .nav-link.disabled {
+    color: #6c757d;
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .nav-tabs .nav-link.active,
+  .nav-tabs .nav-item.show .nav-link {
+    color: #495057;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+  }
+  .nav-tabs .dropdown-menu {
+    margin-top: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  
+  .nav-pills .nav-link {
+    border-radius: 0.25rem;
+  }
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #64a19d;
+  }
+  
+  .nav-fill .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  
+  .nav-justified .nav-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .tab-content > .tab-pane {
+    display: none;
+  }
+  .tab-content > .active {
+    display: block;
+  }
+  
+  .navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+  }
+  .navbar .container,
+  .navbar .container-fluid,
+  .navbar .container-sm,
+  .navbar .container-md,
+  .navbar .container-lg,
+  .navbar .container-xl {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar-brand {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+  }
+  .navbar-brand:hover, .navbar-brand:focus {
+    text-decoration: none;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+  .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .navbar-nav .dropdown-menu {
+    position: static;
+    float: none;
+  }
+  
+  .navbar-text {
+    display: inline-block;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+  }
+  
+  .navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+  }
+  .navbar-toggler:hover, .navbar-toggler:focus {
+    text-decoration: none;
+  }
+  
+  .navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+  }
+  
+  @media (max-width: 575.98px) {
+    .navbar-expand-sm > .container,
+  .navbar-expand-sm > .container-fluid,
+  .navbar-expand-sm > .container-sm,
+  .navbar-expand-sm > .container-md,
+  .navbar-expand-sm > .container-lg,
+  .navbar-expand-sm > .container-xl {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  @media (min-width: 576px) {
+    .navbar-expand-sm {
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+    }
+    .navbar-expand-sm .navbar-nav {
+      flex-direction: row;
+    }
+    .navbar-expand-sm .navbar-nav .dropdown-menu {
+      position: absolute;
+    }
+    .navbar-expand-sm .navbar-nav .nav-link {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+    }
+    .navbar-expand-sm > .container,
+  .navbar-expand-sm > .container-fluid,
+  .navbar-expand-sm > .container-sm,
+  .navbar-expand-sm > .container-md,
+  .navbar-expand-sm > .container-lg,
+  .navbar-expand-sm > .container-xl {
+      flex-wrap: nowrap;
+    }
+    .navbar-expand-sm .navbar-collapse {
+      display: flex !important;
+      flex-basis: auto;
+    }
+    .navbar-expand-sm .navbar-toggler {
+      display: none;
+    }
+  }
+  @media (max-width: 767.98px) {
+    .navbar-expand-md > .container,
+  .navbar-expand-md > .container-fluid,
+  .navbar-expand-md > .container-sm,
+  .navbar-expand-md > .container-md,
+  .navbar-expand-md > .container-lg,
+  .navbar-expand-md > .container-xl {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  @media (min-width: 768px) {
+    .navbar-expand-md {
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+    }
+    .navbar-expand-md .navbar-nav {
+      flex-direction: row;
+    }
+    .navbar-expand-md .navbar-nav .dropdown-menu {
+      position: absolute;
+    }
+    .navbar-expand-md .navbar-nav .nav-link {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+    }
+    .navbar-expand-md > .container,
+  .navbar-expand-md > .container-fluid,
+  .navbar-expand-md > .container-sm,
+  .navbar-expand-md > .container-md,
+  .navbar-expand-md > .container-lg,
+  .navbar-expand-md > .container-xl {
+      flex-wrap: nowrap;
+    }
+    .navbar-expand-md .navbar-collapse {
+      display: flex !important;
+      flex-basis: auto;
+    }
+    .navbar-expand-md .navbar-toggler {
+      display: none;
+    }
+  }
+  @media (max-width: 991.98px) {
+    .navbar-expand-lg > .container,
+  .navbar-expand-lg > .container-fluid,
+  .navbar-expand-lg > .container-sm,
+  .navbar-expand-lg > .container-md,
+  .navbar-expand-lg > .container-lg,
+  .navbar-expand-lg > .container-xl {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  @media (min-width: 992px) {
+    .navbar-expand-lg {
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+    }
+    .navbar-expand-lg .navbar-nav {
+      flex-direction: row;
+    }
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+      position: absolute;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+    }
+    .navbar-expand-lg > .container,
+  .navbar-expand-lg > .container-fluid,
+  .navbar-expand-lg > .container-sm,
+  .navbar-expand-lg > .container-md,
+  .navbar-expand-lg > .container-lg,
+  .navbar-expand-lg > .container-xl {
+      flex-wrap: nowrap;
+    }
+    .navbar-expand-lg .navbar-collapse {
+      display: flex !important;
+      flex-basis: auto;
+    }
+    .navbar-expand-lg .navbar-toggler {
+      display: none;
+    }
+  }
+  @media (max-width: 1199.98px) {
+    .navbar-expand-xl > .container,
+  .navbar-expand-xl > .container-fluid,
+  .navbar-expand-xl > .container-sm,
+  .navbar-expand-xl > .container-md,
+  .navbar-expand-xl > .container-lg,
+  .navbar-expand-xl > .container-xl {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  @media (min-width: 1200px) {
+    .navbar-expand-xl {
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+    }
+    .navbar-expand-xl .navbar-nav {
+      flex-direction: row;
+    }
+    .navbar-expand-xl .navbar-nav .dropdown-menu {
+      position: absolute;
+    }
+    .navbar-expand-xl .navbar-nav .nav-link {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+    }
+    .navbar-expand-xl > .container,
+  .navbar-expand-xl > .container-fluid,
+  .navbar-expand-xl > .container-sm,
+  .navbar-expand-xl > .container-md,
+  .navbar-expand-xl > .container-lg,
+  .navbar-expand-xl > .container-xl {
+      flex-wrap: nowrap;
+    }
+    .navbar-expand-xl .navbar-collapse {
+      display: flex !important;
+      flex-basis: auto;
+    }
+    .navbar-expand-xl .navbar-toggler {
+      display: none;
+    }
+  }
+  .navbar-expand {
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+  }
+  .navbar-expand > .container,
+  .navbar-expand > .container-fluid,
+  .navbar-expand > .container-sm,
+  .navbar-expand > .container-md,
+  .navbar-expand > .container-lg,
+  .navbar-expand > .container-xl {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .navbar-expand .navbar-nav {
+    flex-direction: row;
+  }
+  .navbar-expand .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+  .navbar-expand .navbar-nav .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+  .navbar-expand > .container,
+  .navbar-expand > .container-fluid,
+  .navbar-expand > .container-sm,
+  .navbar-expand > .container-md,
+  .navbar-expand > .container-lg,
+  .navbar-expand > .container-xl {
+    flex-wrap: nowrap;
+  }
+  .navbar-expand .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+  .navbar-expand .navbar-toggler {
+    display: none;
+  }
+  
+  .navbar-light .navbar-brand {
+    color: rgba(0, 0, 0, 0.9);
+  }
+  .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
+    color: rgba(0, 0, 0, 0.9);
+  }
+  .navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .navbar-light .navbar-nav .nav-link.disabled {
+    color: rgba(0, 0, 0, 0.3);
+  }
+  .navbar-light .navbar-nav .show > .nav-link,
+  .navbar-light .navbar-nav .active > .nav-link,
+  .navbar-light .navbar-nav .nav-link.show,
+  .navbar-light .navbar-nav .nav-link.active {
+    color: rgba(0, 0, 0, 0.9);
+  }
+  .navbar-light .navbar-toggler {
+    color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+  .navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  .navbar-light .navbar-text {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .navbar-light .navbar-text a {
+    color: rgba(0, 0, 0, 0.9);
+  }
+  .navbar-light .navbar-text a:hover, .navbar-light .navbar-text a:focus {
+    color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .navbar-dark .navbar-brand {
+    color: #fff;
+  }
+  .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
+    color: #fff;
+  }
+  .navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  .navbar-dark .navbar-nav .nav-link.disabled {
+    color: rgba(255, 255, 255, 0.25);
+  }
+  .navbar-dark .navbar-nav .show > .nav-link,
+  .navbar-dark .navbar-nav .active > .nav-link,
+  .navbar-dark .navbar-nav .nav-link.show,
+  .navbar-dark .navbar-nav .nav-link.active {
+    color: #fff;
+  }
+  .navbar-dark .navbar-toggler {
+    color: rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  .navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  .navbar-dark .navbar-text {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .navbar-dark .navbar-text a {
+    color: #fff;
+  }
+  .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
+    color: #fff;
+  }
+  .show > .logoutButton:focus{
+  background: rgb(122, 20, 20) !important ;
+    box-shadow:none !important ;
+    border: none !important ;
+  }
+  .logoutButton{
+    box-shadow:none !important;
+    border: none !important; 
+  }

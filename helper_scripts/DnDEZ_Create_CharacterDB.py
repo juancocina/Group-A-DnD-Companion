@@ -14,7 +14,7 @@ c = conn.cursor();
 # my functions
 def createTables():
     # creates table characters
-    c.execute('''CREATE TABLE IF NOT EXISTS user_character_list(
+    c.execute('''CREATE TABLE IF NOT EXISTS characters (
         user_id text, char_id text PRIMARY KEY, char_name text,
         char_lvl int, race_id text, class_id text,
         background_id text, alignment text, prof_bonus int,
