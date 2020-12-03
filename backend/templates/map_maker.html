@@ -39,7 +39,7 @@
             
                     <!-- Modal body -->
                     <div class="modal-body">
-                    Modal body..
+                        <img  src="{{ url_for('static', filename='media/map_howto.png') }}">
                     </div>
             
                     <!-- Modal footer -->
@@ -68,7 +68,7 @@
             </div>
             <div class="form-group">
                 <label class="label" id="ie3pz">Select Environment Type</label>
-                <select required name="environment" class="select" id="i4z7n"><option value="">- Select option -</option><option value="caves">Caves</option><option value="desert">Desert</option><option value="forest">Forest</option><option value="islands">Islands</option></select>
+                <select required name="environment" class="select" id="i4z7n"><option value="">- Select option -</option><option value="caves">Caves</option><option value="desert">Desert</option><option value="forest">Forest</option><option value="islands">Islands</option><option value="blossom">Blossom</option><option value="terrace">Terrace</option></select>
             </div>
             <div class="form-group">
                 <label class="label" id="scale">Select Map Size</label>
@@ -77,14 +77,14 @@
             <div class="form-group" id="ia0uq">
                 <label class="label" id="ikbos">Map Zoom: <span id="zoom_value" style="font-weight:bold; color:red">10</span></label>
                 <div class="slidecontainer">
-                    <input type="range" min="50" max="1000" step="50" class="slider" name="scale" id="zoom_range">
+                    <input type="range" min="50" max="1400" step="50" class="slider" name="scale" id="zoom_range">
                 </div>
                 <!-- <input required class="input" id="zoom" name="scale"> -->
             </div>
             <div class="form-group">
                 <label class="label" id="i9mq6"><b>Map Layers: </b><span id="layers_value" style="font-weight:bold; color:red">10</span></label>
                 <div class="slidecontainer">
-                    <input type="range" min="3" max="10" class="slider" name="octaves" id="layers_range">
+                    <input type="range" min="2" max="10" class="slider" name="octaves" id="layers_range">
                 </div>
                 <!-- <input required class="input" id="layers" name="octaves"> -->
             </div>

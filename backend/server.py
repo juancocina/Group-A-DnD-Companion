@@ -326,6 +326,10 @@ def make_map(id):
             color_world = color_caves(world, app.config['CAVES_COLOR'], shape, savepath)
         elif environment == "forest":
             color_world = color_forest(world, app.config['FORESTS_COLOR'], shape, savepath)
+        elif environment == "blossom":
+            color_wold = color_blossom(world, app.config['BLOSSOM_COLOR'], shape, savepath)
+        elif environment == "terrace":
+            color_world = color_terrace(world, app.config['TERRACE_COLOR'], shape, savepath)
         else:
             pass
 

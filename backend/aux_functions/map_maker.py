@@ -129,6 +129,168 @@ def color_caves(world, dict, shape, path):
 
     imageio.imwrite(path, color_world)
 
+def color_blossom(world, dict, shape, path):
+    color_world = np.zeros(world.shape + (3,))
+    for i in range(shape[0]):
+        for j in range(shape[1]):
+            if world[i][j] < -0.2:
+                random_int = random.randint(0, 1)
+                if random_int == 0:
+                    color_world[i][j] = dict['pink']
+                elif random_int == 1:
+                    color_world[i][j] = dict['light_pink']
+            elif world[i][j] < -.1:
+                random_int = random.randint(0, 1)
+                if random_int == 0:
+                    color_world[i][j] = dict['light_pink']
+                elif random_int == 1:
+                    color_world[i][j] = dict['light_yellow']
+            elif world[i][j] < -.05:
+                random_int = random.randint(0, 1)
+                if random_int == 0:
+                    color_world[i][j] = dict['light_yellow']
+                elif random_int == 1:
+                    color_world[i][j] = dict['green']
+            elif world[i][j] < 0:
+                color_world[i][j] = dict['river']
+            elif world[i][j] < .05:
+                random_int = random.randint(0, 1)
+                if random_int == 0:
+                    color_world[i][j] = dict['light_yellow']
+                elif random_int == 1:
+                    color_world[i][j] = dict['green']
+            elif world[i][j] < .15:
+                random_int = random.randint(0, 1)
+                if random_int == 0:
+                    color_world[i][j] = dict['light_pink']
+                elif random_int == 1:
+                    color_world[i][j] = dict['light_yellow']
+            elif world[i][j] < 1:
+                random_int = random.randint(0, 1)
+                if random_int == 0:
+                    color_world[i][j] = dict['pink']
+                elif random_int == 1:
+                    color_world[i][j] = dict['light_pink']
+
+    imageio.imwrite(path, color_world)
+
+
+def color_terrace(world, dict, shape, path):
+    color_world = np.zeros(world.shape + (3,))
+    for i in range(shape[0]):
+        for j in range(shape[1]):
+            if world[i][j] < -.30:
+                random_int = random.randint(0, 2)
+                if random_int == 0:
+                    color_world[i][j] = dict['spring']
+                else:
+                    color_world[i][j] = dict['dark_green']
+            elif world[i][j] < -.28:
+                random_int = random.randint(0, 1)
+                if random_int == 0:
+                    color_world[i][j] = dict['dirt']
+                else:
+                    color_world[i][j] = dict['tan']
+            elif world[i][j] < -.22:
+                random_int = random.randint(0, 2)
+                if random_int == 0:
+                    color_world[i][j] = dict['spring']
+                else:
+                    color_world[i][j] = dict['green']
+            elif world[i][j] < -.2:
+                random_int = random.randint(0, 1)
+                if random_int == 0:
+                    color_world[i][j] = dict['dirt']
+                else:
+                    color_world[i][j] = dict['tan']
+            elif world[i][j] < -.14:
+                random_int = random.randint(0, 2)
+                if random_int == 0:
+                    color_world[i][j] = dict['spring']
+                else:
+                    color_world[i][j] = dict['light_green']
+            elif world[i][j] < -.12:
+                random_int = random.randint(0, 1)
+                if random_int == 0:
+                    color_world[i][j] = dict['dirt']
+                else:
+                    color_world[i][j] = dict['tan']
+            elif world[i][j] < -.07:
+                color_world[i][j] = dict['river']
+            elif world[i][j] < -.05:
+                random_int = random.randint(0, 1)
+                if random_int == 0:
+                    color_world[i][j] = dict['dirt']
+                else:
+                    color_world[i][j] = dict['tan']
+            elif world[i][j] < .01:
+                random_int = random.randint(0, 2)
+                if random_int == 0:
+                    color_world[i][j] = dict['spring']
+                else:
+                    color_world[i][j] = dict['light_green']
+            elif world[i][j] < .03:
+                random_int = random.randint(0, 1)
+                if random_int == 0:
+                    color_world[i][j] = dict['dirt']
+                else:
+                    color_world[i][j] = dict['tan']
+            elif world[i][j] < .09:
+                random_int = random.randint(0, 2)
+                if random_int == 0:
+                    color_world[i][j] = dict['spring']
+                else:
+                    color_world[i][j] = dict['green']
+            elif world[i][j] < .11:
+                random_int = random.randint(0, 1)
+                if random_int == 0:
+                    color_world[i][j] = dict['dirt']
+                else:
+                    color_world[i][j] = dict['tan']
+            elif world[i][j] < .17:
+                random_int = random.randint(0, 2)
+                if random_int == 0:
+                    color_world[i][j] = dict['spring']
+                else:
+                    color_world[i][j] = dict['dark_green']
+            elif world[i][j] < .19:
+                random_int = random.randint(0, 1)
+                if random_int == 0:
+                    color_world[i][j] = dict['dirt']
+                else:
+                    color_world[i][j] = dict['tan']
+            elif world[i][j] < .25:
+                random_int = random.randint(0, 2)
+                if random_int == 0:
+                    color_world[i][j] = dict['spring']
+                else:
+                    color_world[i][j] = dict['darker_green']
+            elif world[i][j] < .27:
+                random_int = random.randint(0, 1)
+                if random_int == 0:
+                    color_world[i][j] = dict['dirt']
+                else:
+                    color_world[i][j] = dict['tan']
+            elif world[i][j] < .33:
+                random_int = random.randint(0, 2)
+                if random_int == 0:
+                    color_world[i][j] = dict['spring']
+                else:
+                    color_world[i][j] = dict['darkerer_green']
+            elif world[i][j] < .35:
+                random_int = random.randint(0, 1)
+                if random_int == 0:
+                    color_world[i][j] = dict['dirt']
+                else:
+                    color_world[i][j] = dict['tan']
+            elif world[i][j] <= 1:
+                random_int = random.randint(0, 2)
+                if random_int == 0:
+                    color_world[i][j] = dict['spring']
+                else:
+                    color_world[i][j] = dict['darkest_green']
+    imageio.imwrite(path, color_world)
+
 
 def add_grid(filepath, environment):
     background = imageio.imread(filepath)
